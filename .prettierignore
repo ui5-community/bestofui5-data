@@ -1,0 +1,8 @@
+# Ignore specific files
+_config.yml
+
+# Ignore files by extension
+/**/*.md
+/**/*.svg
+
+# Ignore folders

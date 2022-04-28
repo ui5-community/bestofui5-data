@@ -1,0 +1,34 @@
+name: crawl
+
+on:
+  schedule:
+    - cron: "50 3 * * *" # runs every day at 03:50 UTC to avoid high loads
+  workflow_dispatch:
+
+env:
+  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Use Node.js LTS (16.x)
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - name: npm install
+        run: |
+          npm install
+      - name: crawl data
+        run: |
+          npm run build
+      - name: Commit/Push build to docs branch
+        run: |
+          git config --global user.name 'marianfoo'
+          git config --global user.email '13335743+marianfoo@users.noreply.github.com'
+          git add data/data.json
+          git add data/versions.json
+          git commit -m "chore: crawl"
+          git push origin HEAD:live-data --force

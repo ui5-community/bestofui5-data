@@ -1,8 +1,5 @@
-# Ignore specific files
-_config.yml
+# Ignore build output folders
+/data/**
 
 # Ignore files by extension
 /**/*.md
-/**/*.svg
-
-# Ignore folders

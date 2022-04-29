@@ -1,0 +1,14 @@
+# Ignore build output folders
+/data/**
+
+# Ignore files by extension
+/**/*.md
+
+# Additionally ignore files for linting
+/**/*.html
+/**/*.css
+/**/*.json
+/**/*.xml
+/**/*.properties
+/**/*.yaml
+/**/*.yml

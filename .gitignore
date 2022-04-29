@@ -1,18 +1,12 @@
 # the node_modules!
 node_modules/
 
-# build results
-webapp
-dist
-docs
-
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
 
 # No Mac files
 .DS_Store

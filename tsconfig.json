@@ -14,7 +14,7 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "baseUrl": "./",
-    "typeRoots": ["../node_modules/@types"],
+    "typeRoots": ["node_modules/@types"],
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
     "useUnknownInCatchVariables": false
   }

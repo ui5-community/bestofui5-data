@@ -52,7 +52,7 @@ export interface IPackage {
 	gitHubRepo: string;
 	defaultBranch: string;
 	downloadsHistory?: PackageDownloadsHistory[];
-	versions?: any;
+	versions?: NPMVersions[];
 }
 
 export interface Tags {

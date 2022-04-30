@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync } from "fs";
 
 import GitHubRepositoriesProvider from "./gh-repos";
 import NPMProvider from "./npm";
-import { IPackage, Source, Tags, DataJson } from "./types";
+import { IPackage, Source, Tags, DataJson, NPMVersions } from "./types";
 
 // TEST
 
@@ -52,12 +52,12 @@ import { IPackage, Source, Tags, DataJson } from "./types";
 		// create verions array
 		if (packageContent.versions) {
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-			for (const [key, value] of Object.entries(packageContent.versions)) {
-				if (key !== "created" && key !== "modified") {
+			for (const version of packageContent.versions) {
+				if (version.version !== "created" && version.version !== "modified") {
 					const versionObject = {
 						name: packageContent.name,
-						version: key,
-						date: value,
+						version: version.version,
+						date: version.date,
 					};
 					versionsArray.push(versionObject);
 				}

@@ -138,3 +138,8 @@ export interface NPMDownloadsHistoryDownloads {
 	downloads: number;
 	day: string;
 }
+
+export interface NPMVersions {
+	date: string;
+	version: string;
+}

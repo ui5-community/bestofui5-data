@@ -1,7 +1,6 @@
-import { IPackage, NPMDownloads, NPMDownloadsHistory, NPMDownloadsHistoryDownloads, PackageDownloadsHistory } from "./types";
+import { IPackage, NPMDownloads, NPMDownloadsHistory, NPMDownloadsHistoryDownloads, NPMVersions, PackageDownloadsHistory } from "./types";
 // import { getPackageManifest, searchPackages } from "query-registry";
 import axios from "axios";
-import { type } from "os";
 // import removeMarkdown from "markdown-to-text";
 
 function sleep(ms: number) {
@@ -155,7 +154,7 @@ export default class NpmProvider {
 				const metaData = await getMetaData(source.name);
 				source.createdAt = metaData?.data?.time?.created;
 				source.updatedAt = metaData?.data?.time?.modified;
-				source.versions = metaData?.data?.time;
+				source.versions = this.formatVersionToArray(metaData?.data?.time);
 				source.npmlink = `https://www.npmjs.com/package/${source.name}`;
 			} catch (error) {
 				console.error(`Error fetching npm metadata for ${source.name}`);
@@ -211,5 +210,16 @@ export default class NpmProvider {
 			}
 		}
 		return groupedByYearMonth;
+	}
+
+	static formatVersionToArray(version: any): NPMVersions[] {
+		let versions: NPMVersions[] = [];
+		for (const [key, value] of Object.entries(version)) {
+			versions.push({
+				version: key,
+				date: value as string,
+			});
+		}
+		return versions;
 	}
 }

@@ -4,12 +4,14 @@ import { throttling } from "@octokit/plugin-throttling";
 const MyOctokit = Octokit.plugin(throttling);
 import * as jsdoc2md from "jsdoc-to-markdown";
 import * as yaml from "js-yaml";
+import { readFileSync, writeFileSync } from "fs";
 
-import { IPackage, Jsdoc, JsdocType, Params, Source, SubPackage, UI5Yaml } from "./types";
+import { ClonesJson, IPackage, Jsdoc, JsdocType, Params, Source, SubPackage, UI5Yaml } from "./types";
 import Package from "./Package";
 
 export default class GitHubRepositoriesProvider {
 	static source = "github-packages";
+	static clonesJson: ClonesJson[] = [];
 
 	static octokit = new MyOctokit({
 		auth: process.env.GITHUB_TOKEN,
@@ -31,6 +33,8 @@ export default class GitHubRepositoriesProvider {
 	});
 
 	static async get(sources: Source[]): Promise<IPackage[]> {
+		const json = readFileSync(`${__dirname}/../data/clones.json`, { encoding: "utf8", flag: "r" });
+		this.clonesJson = JSON.parse(json) as ClonesJson[];
 		const packages: IPackage[] = [];
 
 		for (const source of sources) {
@@ -62,7 +66,7 @@ export default class GitHubRepositoriesProvider {
 				packages.push(packageInfo);
 			}
 		}
-
+		writeFileSync(`${__dirname}/../data/clones.json`, JSON.stringify(this.clonesJson));
 		return packages;
 	}
 
@@ -81,6 +85,11 @@ export default class GitHubRepositoriesProvider {
 				console.log(error);
 				console.log(`Error while fetching last commit date for ${source.path}`);
 				packageObject.updatedAt = repo.data.updated_at;
+			}
+			try {
+				await this.updateCloningStats(source);
+			} catch (error) {
+				console.log(error);
 			}
 		} else {
 			packageObject.updatedAt = repo.data.updated_at;
@@ -257,5 +266,26 @@ export default class GitHubRepositoriesProvider {
 		});
 
 		return latestCommit.data.committer.date;
+	}
+
+	static async updateCloningStats(source: Source): Promise<void> {
+		const clonesRawData = await GitHubRepositoriesProvider.octokit.rest.repos.getClones({
+			owner: source.owner,
+			repo: source.repo,
+		});
+		let clonesGithubData: ClonesJson = clonesRawData.data as ClonesJson;
+		let cloneHistory = this.clonesJson.filter((clone: any) => clone.name === source.repo);
+		if (cloneHistory.length === 0) {
+			clonesGithubData.name = source.repo;
+			this.clonesJson.push(clonesGithubData);
+		} else {
+			for (const cloneDate of clonesGithubData.clones) {
+				// find objects with same timestamp in clones.data
+				const newCloneDate = cloneHistory[0].clones.filter((clone: any) => clone.timestamp === cloneDate.timestamp);
+				if (newCloneDate.length === 0) {
+					cloneHistory[0].clones.push(cloneDate);
+				}
+			}
+		}
 	}
 }

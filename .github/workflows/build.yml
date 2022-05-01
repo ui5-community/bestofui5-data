@@ -19,6 +19,8 @@ jobs:
           fetch-depth: 0
       - name: switch to live-data branch
         run: |
+          git config --global user.name 'marianfoo'
+          git config --global user.email '13335743+marianfoo@users.noreply.github.com'
           git fetch --all
           git checkout live-data
           git pull origin live-data
@@ -37,8 +39,6 @@ jobs:
           npm run build
       - name: Commit/Push build to docs branch
         run: |
-          git config --global user.name 'marianfoo'
-          git config --global user.email '13335743+marianfoo@users.noreply.github.com'
           git add data/data.json
           git add data/versions.json
           git commit -m "chore: crawl"

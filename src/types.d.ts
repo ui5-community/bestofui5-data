@@ -143,3 +143,14 @@ export interface NPMVersions {
 	date: string;
 	version: string;
 }
+
+export interface ClonesJson {
+	name: string;
+	count: number;
+	uniques: number;
+	clones: {
+		timestamp: string;
+		count: number;
+		uniques: number;
+	}[];
+}

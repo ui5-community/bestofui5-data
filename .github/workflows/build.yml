@@ -7,7 +7,7 @@ on:
 
 env:
   HUSKY_SKIP: true
-  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  GITHUB_TOKEN: ${{secrets.WORKFLOW_CRAWL_GITHUB_TOKEN}}
 
 jobs:
   crawl:
@@ -41,6 +41,7 @@ jobs:
         run: |
           git add data/data.json
           git add data/versions.json
+          git add data/clones.json
           git commit -m "chore: crawl"
           git push origin HEAD:live-data -f
         continue-on-error: true

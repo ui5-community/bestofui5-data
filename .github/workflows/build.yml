@@ -15,6 +15,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: switch to live-data branch
+        run: |
+          git fetch --all
+          git checkout live-data
+          git pull origin live-data
+      - name: rebase from main
+        run: |
+          git rebase main
       - name: Use Node.js LTS (16.x)
         uses: actions/setup-node@v2
         with:
@@ -32,4 +42,5 @@ jobs:
           git add data/data.json
           git add data/versions.json
           git commit -m "chore: crawl"
-          git push origin HEAD:live-data --force
+          git push live-data
+        continue-on-error: true

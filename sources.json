@@ -134,6 +134,13 @@
     "tags": ["markdown"]
   },
   {
+    "owner": "ui5-community",
+    "repo": "ui5-cc-chart",
+    "addedToBoUI5": "2022-05-12T13:37:57.868Z",
+    "type": "customControl",
+    "tags": ["chart"]
+  },
+  {
     "owner": "js-soft",
     "repo": "wdi5",
     "addedToBoUI5": "2022-04-12T00:00:00.007Z",

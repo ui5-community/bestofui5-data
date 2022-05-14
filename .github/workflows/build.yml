@@ -24,9 +24,12 @@ jobs:
           git fetch --all
           git checkout live-data
           git checkout main
-      - name: rebase from live-data
+      - name: get data from live-data
         run: |
-          git rebase live-data
+          git show live-data:data/data.json > data/data.json  
+          git show live-data:data/versions.json > data/versions.json  
+          git show live-data:data/clones.json > data/clones.json  
+          git show live-data:data/contributors.json > data/contributors.json
       - name: Use Node.js LTS (16.x)
         uses: actions/setup-node@v2
         with:

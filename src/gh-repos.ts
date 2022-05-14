@@ -36,14 +36,19 @@ export default class GitHubRepositoriesProvider {
 		const json = readFileSync(`${__dirname}/../data/clones.json`, { encoding: "utf8", flag: "r" });
 		this.clonesJson = JSON.parse(json) as ClonesJson[];
 		const packages: IPackage[] = [];
+		let contributors: Contributor[] = [];
 
 		for (const source of sources) {
 			source.path = `${source.owner}/${source.repo}`;
+
 			if (source.subpath && source.subpackages) {
 				const repoInfo = await this.getRepoInfo(source);
+				contributors = await this.fetchGitHubContributors(source, contributors);
 				for (const subpackage of source.subpackages) {
 					const path = `${source.subpath}/${subpackage.name}/`;
-					let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
+					console.log(`Fetching GitHub Data from ${source.owner}/${source.repo}/${source.subpath}/${subpackage.name}/`);
+					const packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
+
 					if (packageInfo.type === "task" || packageInfo.type === "middleware" || packageInfo.type === "tooling") {
 						try {
 							packageInfo["jsdoc"] = await this.getJsdoc(source, path);
@@ -51,12 +56,14 @@ export default class GitHubRepositoriesProvider {
 							console.log(`Error while fetching jsdoc for ${source.path}`);
 						}
 					}
-					packageInfo = await this.fetchGitHubContributors(source, packageInfo);
+
 					packages.push(packageInfo);
 				}
 			} else {
+				console.log(`Fetching GitHub Data from ${source.owner}/${source.repo}/`);
 				const repoInfo = await this.getRepoInfo(source);
-				let packageInfo = await this.fetchRepo(source, "", repoInfo, source);
+				const packageInfo = await this.fetchRepo(source, "", repoInfo, source);
+				contributors = await this.fetchGitHubContributors(source, contributors);
 				if (packageInfo.type === "task" || packageInfo.type === "middleware" || packageInfo.type === "tooling") {
 					try {
 						packageInfo["jsdoc"] = await this.getJsdoc(source, "");
@@ -64,11 +71,11 @@ export default class GitHubRepositoriesProvider {
 						console.log(`Error while fetching jsdoc for ${source.path}`);
 					}
 				}
-				packageInfo = await this.fetchGitHubContributors(source, packageInfo);
 				packages.push(packageInfo);
 			}
 		}
 		writeFileSync(`${__dirname}/../data/clones.json`, JSON.stringify(this.clonesJson));
+		writeFileSync(`${__dirname}/../data/contributors.json`, JSON.stringify(contributors));
 		return packages;
 	}
 
@@ -151,24 +158,33 @@ export default class GitHubRepositoriesProvider {
 		return packageReturn;
 	}
 
-	static async fetchGitHubContributors(source: Source, packageInfo: IPackage): Promise<IPackage> {
+	static async fetchGitHubContributors(source: Source, contributorsArray: Contributor[]): Promise<Contributor[]> {
 		const contributorsData = await GitHubRepositoriesProvider.octokit.rest.repos.listContributors({
 			owner: source.owner,
 			repo: source.repo,
 		});
 		const contributors = contributorsData.data.filter((contributor) => contributor.type === "User");
-		packageInfo.gitHubContributors = [];
+		// create contributors array
 		for (const contributor of contributors) {
-			packageInfo.gitHubContributors.push({
-				name: contributor.login,
-				contributions: contributor.contributions,
-				avatar_url: contributor.avatar_url,
-				url: contributor.html_url,
-				packages: [],
-			} as Contributor);
+			const contributorsExists: Contributor = contributorsArray.find((contrObj) => contrObj.name === contributor.login);
+			if (!contributorsExists) {
+				const contrObj: Contributor = {
+					name: contributor.login,
+					contributions: contributor.contributions,
+					avatar_url: contributor.avatar_url,
+					url: contributor.html_url,
+					packages: [source.repo],
+					packagesFrontend: [`\n <a href='https://github.com/${source.owner}/${source.repo}' target='self'>${source.repo}</a>`],
+				};
+				contributorsArray.push(contrObj);
+			} else {
+				contributorsExists.contributions += contributor.contributions;
+				contributorsExists.packages.push(source.repo);
+				contributorsExists.packagesFrontend.push(`\n <a href='https://github.com/${source.owner}/${source.repo}' target='self'>${source.repo}</a>`);
+			}
 		}
 
-		return packageInfo;
+		return contributorsArray;
 	}
 
 	static async getJsdoc(source: Source, path: string): Promise<Jsdoc> {

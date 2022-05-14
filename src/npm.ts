@@ -102,12 +102,17 @@ export default class NpmProvider {
 			});
 		const bulkNamesConcat: string = bulkDownloads.map((p) => p.name).join(",");
 		// maximum of 128 packages per request
+		console.log(`Getting npm bulk downloads for currentFortnight packages.`);
 		const bulkDataCurrentFortnight = await getDownloadsBulk(bulkNamesConcat, dates.currentFortnight);
+		console.log(`Getting npm bulk downloads for lastFortnight packages.`);
 		const bulkDataPreviousFortnight = await getDownloadsBulk(bulkNamesConcat, dates.lastFortnight);
+		console.log(`Getting npm bulk downloads for last-month packages.`);
 		const bulkDataMonth = await getDownloadsBulk(bulkNamesConcat, "last-month");
+		console.log(`Getting npm bulk downloads for last-year packages.`);
 		const bulkDataYear = await getDownloadsBulk(bulkNamesConcat, "last-year");
 
 		for (const { idx, source } of packages.map((source, idx) => ({ idx, source }))) {
+			console.log(`Getting npm downloads and metadata for ${source.name} package.`);
 			await sleep(Math.floor(idx / 20) * 1000);
 			// set values for generator because there is no npm package
 			if (source.type === "generator") {

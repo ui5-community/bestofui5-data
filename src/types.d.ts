@@ -162,4 +162,5 @@ export interface Contributor {
 	avatar_url: string;
 	url: string;
 	packages: string[];
+	packagesFrontend: string[];
 }

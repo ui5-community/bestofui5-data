@@ -53,6 +53,7 @@ export interface IPackage {
 	defaultBranch: string;
 	downloadsHistory?: PackageDownloadsHistory[];
 	versions?: NPMVersions[];
+	gitHubContributors?: Contributor[];
 }
 
 export interface Tags {
@@ -153,4 +154,12 @@ export interface ClonesJson {
 		count: number;
 		uniques: number;
 	}[];
+}
+
+export interface Contributor {
+	name: string;
+	contributions: number;
+	avatar_url: string;
+	url: string;
+	packages: string[];
 }

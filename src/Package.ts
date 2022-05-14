@@ -1,4 +1,4 @@
-import { IPackage, PackageDownloadsHistory } from "./types";
+import { Contributor, IPackage, PackageDownloadsHistory } from "./types";
 
 export default class Package implements IPackage {
 	name: string;
@@ -26,4 +26,5 @@ export default class Package implements IPackage {
 	defaultBranch: string;
 	downloadsHistory?: PackageDownloadsHistory[];
 	versions?: any;
+	gitHubContributors?: Contributor[];
 }

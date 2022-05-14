@@ -6,7 +6,7 @@ import * as jsdoc2md from "jsdoc-to-markdown";
 import * as yaml from "js-yaml";
 import { readFileSync, writeFileSync } from "fs";
 
-import { ClonesJson, IPackage, Jsdoc, JsdocType, Params, Source, SubPackage, UI5Yaml } from "./types";
+import { ClonesJson, Contributor, IPackage, Jsdoc, JsdocType, Params, Source, SubPackage, UI5Yaml } from "./types";
 import Package from "./Package";
 
 export default class GitHubRepositoriesProvider {
@@ -43,7 +43,7 @@ export default class GitHubRepositoriesProvider {
 				const repoInfo = await this.getRepoInfo(source);
 				for (const subpackage of source.subpackages) {
 					const path = `${source.subpath}/${subpackage.name}/`;
-					const packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
+					let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
 					if (packageInfo.type === "task" || packageInfo.type === "middleware" || packageInfo.type === "tooling") {
 						try {
 							packageInfo["jsdoc"] = await this.getJsdoc(source, path);
@@ -51,11 +51,12 @@ export default class GitHubRepositoriesProvider {
 							console.log(`Error while fetching jsdoc for ${source.path}`);
 						}
 					}
+					packageInfo = await this.fetchGitHubContributors(source, packageInfo);
 					packages.push(packageInfo);
 				}
 			} else {
 				const repoInfo = await this.getRepoInfo(source);
-				const packageInfo = await this.fetchRepo(source, "", repoInfo, source);
+				let packageInfo = await this.fetchRepo(source, "", repoInfo, source);
 				if (packageInfo.type === "task" || packageInfo.type === "middleware" || packageInfo.type === "tooling") {
 					try {
 						packageInfo["jsdoc"] = await this.getJsdoc(source, "");
@@ -63,6 +64,7 @@ export default class GitHubRepositoriesProvider {
 						console.log(`Error while fetching jsdoc for ${source.path}`);
 					}
 				}
+				packageInfo = await this.fetchGitHubContributors(source, packageInfo);
 				packages.push(packageInfo);
 			}
 		}
@@ -147,6 +149,26 @@ export default class GitHubRepositoriesProvider {
 		}
 
 		return packageReturn;
+	}
+
+	static async fetchGitHubContributors(source: Source, packageInfo: IPackage): Promise<IPackage> {
+		const contributorsData = await GitHubRepositoriesProvider.octokit.rest.repos.listContributors({
+			owner: source.owner,
+			repo: source.repo,
+		});
+		const contributors = contributorsData.data.filter((contributor) => contributor.type === "User");
+		packageInfo.gitHubContributors = [];
+		for (const contributor of contributors) {
+			packageInfo.gitHubContributors.push({
+				name: contributor.login,
+				contributions: contributor.contributions,
+				avatar_url: contributor.avatar_url,
+				url: contributor.html_url,
+				packages: [],
+			} as Contributor);
+		}
+
+		return packageInfo;
 	}
 
 	static async getJsdoc(source: Source, path: string): Promise<Jsdoc> {

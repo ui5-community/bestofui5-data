@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync } from "fs";
 
 import GitHubRepositoriesProvider from "./gh-repos";
 import NPMProvider from "./npm";
-import { IPackage, Source, Tags, DataJson, NPMVersions } from "./types";
+import { IPackage, Source, Tags, DataJson, NPMVersions, Contributor } from "./types";
 
 // TEST
 
@@ -24,6 +24,7 @@ import { IPackage, Source, Tags, DataJson, NPMVersions } from "./types";
 	const typesArray: Tags[] = [];
 	const tagsArray: Tags[] = [];
 	const versionsArray: any[] = [];
+	const contributorsArray: any[] = [];
 	for (const packageContent of githubPackages) {
 		const typeExists: Tags = typesArray.find((typeObj) => typeObj.name === packageContent.type);
 		if (!typeExists) {
@@ -63,6 +64,23 @@ import { IPackage, Source, Tags, DataJson, NPMVersions } from "./types";
 				}
 			}
 		}
+		// create contributors array
+		for (const contributor of packageContent.gitHubContributors) {
+			const contributorsExists: Contributor = contributorsArray.find((contrObj) => contrObj.name === contributor.name);
+			if (!contributorsExists) {
+				const contrObj: Contributor = {
+					name: contributor.name,
+					contributions: contributor.contributions,
+					avatar_url: contributor.avatar_url,
+					url: contributor.url,
+					packages: [packageContent.name],
+				};
+				contributorsArray.push(contrObj);
+			} else {
+				contributorsExists.contributions += contributor.contributions;
+				contributorsExists.packages.push(packageContent.name);
+			}
+		}
 	}
 
 	dataJson.packages = githubPackages;
@@ -70,4 +88,5 @@ import { IPackage, Source, Tags, DataJson, NPMVersions } from "./types";
 
 	writeFileSync(`${__dirname}/../data/data.json`, JSON.stringify(dataJson));
 	writeFileSync(`${__dirname}/../data/versions.json`, JSON.stringify(versionsArray));
+	writeFileSync(`${__dirname}/../data/contributors.json`, JSON.stringify(contributorsArray));
 })();

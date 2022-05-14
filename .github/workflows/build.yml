@@ -30,6 +30,7 @@ jobs:
           git show live-data:data/versions.json > data/versions.json  
           git show live-data:data/clones.json > data/clones.json  
           git show live-data:data/contributors.json > data/contributors.json
+        continue-on-error: true
       - name: Use Node.js LTS (16.x)
         uses: actions/setup-node@v2
         with:

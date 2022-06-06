@@ -8,121 +8,121 @@
         "name": "ui5-middleware-cfdestination",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["btp"]
+        "tags": ["btp", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-iasync",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["browser"]
+        "tags": ["browser", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-index",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["browser"]
+        "tags": ["browser", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-livecompileless",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["css"]
+        "tags": ["css", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-livereload",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["livereload"]
+        "tags": ["livereload", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-livetranspile",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["transpile"]
+        "tags": ["transpile", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-onelogin",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["auth"]
+        "tags": ["auth", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-servestatic",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["proxy"]
+        "tags": ["proxy", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-simpleproxy",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["proxy"]
+        "tags": ["proxy", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-stringreplacer",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["replace"]
+        "tags": ["replace", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-middleware-webjars",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["webjars"]
+        "tags": ["webjars", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-task-compileless",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["css"]
+        "tags": ["css", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-task-flatten-library",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["netweaver"]
+        "tags": ["netweaver", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-task-i18ncheck",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["i18n"]
+        "tags": ["i18n", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-task-minify-xml",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["minify"]
+        "tags": ["minify", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-task-pwa-enabler",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["pwa"]
+        "tags": ["pwa", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-task-stringreplacer",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["replace"]
+        "tags": ["replace", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-task-transpile",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["transpiile"]
+        "tags": ["transpiile", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-task-zipper",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["zip"]
+        "tags": ["zip", "ui5-ecosystem-showcase"]
       },
       {
         "name": "ui5-tooling-modules",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "tooling",
-        "tags": ["tooling"]
+        "tags": ["tooling", "ui5-ecosystem-showcase"]
       }
     ]
   },

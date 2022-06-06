@@ -195,5 +195,12 @@
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "generator",
     "tags": ["control"]
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "openui5-model-odata-v2-odatamodelpromise",
+    "addedToBoUI5": "2022-06-06T12:07:57.868Z",
+    "type": "customControl",
+    "tags": ["odata", "promise"]
   }
 ]

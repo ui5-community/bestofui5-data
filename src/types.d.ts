@@ -5,6 +5,7 @@ enum BoUI5Types {
 	customControl = "customControl",
 	module = "module",
 	generator = "generator",
+	vscode = "vscode",
 }
 
 export interface Ranking {
@@ -28,6 +29,7 @@ export interface TrendsFile {
 }
 
 export interface IPackage {
+	[x: string]: any;
 	name: string;
 	description: string;
 	author: string;
@@ -44,6 +46,8 @@ export interface IPackage {
 	addedToBoUI5: string;
 	githublink: string;
 	npmlink: string;
+	vscodelink: string;
+	vscodeInstalls: number;
 	downloads365: number;
 	downloadsCurrentMonth: number;
 	downloadsCurrentFortnight: number;
@@ -143,6 +147,7 @@ export interface NPMDownloadsHistoryDownloads {
 export interface NPMVersions {
 	date: string;
 	version: string;
+	link: string;
 }
 
 export interface ClonesJson {

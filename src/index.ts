@@ -4,7 +4,8 @@ import { readFileSync, writeFileSync } from "fs";
 
 import GitHubRepositoriesProvider from "./gh-repos";
 import NPMProvider from "./npm";
-import { IPackage, Source, Tags, DataJson, NPMVersions, Contributor } from "./types";
+import VSCProvider from "./vsc";
+import { IPackage, Source, Tags, DataJson } from "./types";
 
 // TEST
 
@@ -19,6 +20,7 @@ import { IPackage, Source, Tags, DataJson, NPMVersions, Contributor } from "./ty
 
 	let githubPackages: IPackage[] = await GitHubRepositoriesProvider.get(sources);
 	githubPackages = await NPMProvider.get(githubPackages);
+	githubPackages = await VSCProvider.get(githubPackages);
 
 	// extract tags from packages info
 	const typesArray: Tags[] = [];

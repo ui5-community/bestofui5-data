@@ -202,12 +202,5 @@
     "addedToBoUI5": "2022-06-06T12:07:57.868Z",
     "type": "customControl",
     "tags": ["odata", "promise"]
-  },
-  {
-    "owner": "CarlosOrozco88",
-    "repo": "ui5-tools",
-    "addedToBoUI5": "2022-06-06T12:07:57.868Z",
-    "type": "vscode",
-    "tags": ["deployer", "builder"]
   }
 ]

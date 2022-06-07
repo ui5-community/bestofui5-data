@@ -270,6 +270,7 @@ export default class GitHubRepositoriesProvider {
 			const data = await jsdoc2md.getTemplateData(opt);
 			const typedef: any[] = data.filter((x: any) => x.kind === "typedef");
 			if (typedef.length > 0) {
+				const yoTypeRegex = /(?<=<)(.*?)(?=>)/;
 				typedef[0].properties.forEach((property: any) => {
 					const param: Params = {
 						type: "",
@@ -280,7 +281,9 @@ export default class GitHubRepositoriesProvider {
 					param.name = property.name as string;
 					param.description = property.description as string;
 					param.optional = property.optional as boolean;
-					param.type = property.type.names[0] as string;
+					param.type = yoTypeRegex.test(property.type.names.find((name: string) => name.includes("yo")))
+						? yoTypeRegex.exec(property.type.names.find((name: string) => name.includes("yo")))[0]
+						: "input";
 					arr.push(param);
 				});
 				returnObject.params = arr;

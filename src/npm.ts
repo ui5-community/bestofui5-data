@@ -96,7 +96,7 @@ export default class NpmProvider {
 		let downloadsYear = 0;
 
 		const bulkDownloads: IPackage[] = packages
-			.filter((p) => p.name.charAt(0) !== "@" && p.type !== "generator")
+			.filter((p) => p.name.charAt(0) !== "@" && p.type !== "generator" && p.type !== "vscode")
 			.map((p) => {
 				return p;
 			});
@@ -115,7 +115,7 @@ export default class NpmProvider {
 			console.log(`Getting npm downloads and metadata for ${source.name} package.`);
 			await sleep(Math.floor(idx / 20) * 1000);
 			// set values for generator because there is no npm package
-			if (source.type === "generator") {
+			if (source.type === "generator" || source.type === "vscode") {
 				source.downloadsCurrentMonth = -1;
 				source.downloadsCurrentFortnight = -1;
 				source.downloads365 = -1;
@@ -159,8 +159,8 @@ export default class NpmProvider {
 				const metaData = await getMetaData(source.name);
 				source.createdAt = metaData?.data?.time?.created;
 				source.updatedAt = metaData?.data?.time?.modified;
-				source.versions = this.formatVersionToArray(metaData?.data?.time);
 				source.npmlink = `https://www.npmjs.com/package/${source.name}`;
+				source.versions = this.formatVersionToArray(metaData?.data?.time, source.npmlink);
 			} catch (error) {
 				console.error(`Error fetching npm metadata for ${source.name}`);
 			}
@@ -217,12 +217,13 @@ export default class NpmProvider {
 		return groupedByYearMonth;
 	}
 
-	static formatVersionToArray(version: any): NPMVersions[] {
+	static formatVersionToArray(version: any, npmlink: string): NPMVersions[] {
 		let versions: NPMVersions[] = [];
 		for (const [key, value] of Object.entries(version)) {
 			versions.push({
 				version: key,
 				date: value as string,
+				link: `${npmlink}/v/${key}`,
 			});
 		}
 		return versions;

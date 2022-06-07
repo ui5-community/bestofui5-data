@@ -1,6 +1,9 @@
 import { Contributor, IPackage, PackageDownloadsHistory } from "./types";
 
 export default class Package implements IPackage {
+	vscodeInstalls: number;
+	[x: string]: any;
+	vscodelink: string;
 	name: string;
 	description: string;
 	author: string;

@@ -32,7 +32,8 @@
     "axios": "^0.27.2",
     "dotenv": "^16.0.0",
     "js-yaml": "^4.1.0",
-    "jsdoc-to-markdown": "^7.1.1"
+    "jsdoc-to-markdown": "^7.1.1",
+    "node-html-parser": "^5.3.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",

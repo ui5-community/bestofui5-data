@@ -13,7 +13,7 @@ export default class VSCProvider {
 			let res = await axios(`https://marketplace.visualstudio.com/items?itemName=${vscodeExtension.publisher}.${vscodeExtension.name}`);
 			const vscodeHTMLParsed = parse(res.data);
 			try {
-				vscodeExtension.installs = vscodeHTMLParsed.querySelector(".installs-text").innerText.replace("installs", "").replace(",", "").trim();
+				vscodeExtension.vscodeInstalls = parseInt(vscodeHTMLParsed.querySelector(".installs-text").innerText.replace("installs", "").replace(",", "").trim());
 			} catch (error) {
 				console.log(`Erorr on VSCode ${vscodeExtension.publisher}.${vscodeExtension.name}: Not found installs`);
 			}

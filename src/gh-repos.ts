@@ -135,6 +135,7 @@ export default class GitHubRepositoriesProvider {
 			packageReturn.addedToBoUI5 = sourcePackage.addedToBoUI5;
 			packageReturn.createdAt = repoInfo.createdAt;
 			packageReturn.updatedAt = repoInfo.updatedAt;
+			packageReturn.vscodeInstalls = -1;
 
 			packageReturn.githublink = `${repoInfo.githublink}/tree/main/${path}`;
 			try {

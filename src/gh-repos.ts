@@ -147,7 +147,8 @@ export default class GitHubRepositoriesProvider {
 					repo: source.repo,
 					path: `${path}README.md`,
 				});
-				const readmeString = readme.data.toString();
+				let readmeString = readme.data.toString();
+				readmeString = readmeString.replace('<img src="', `<img src="https://raw.githubusercontent.com/${source.owner}/${source.repo}/main/`);
 				packageReturn.readme = readmeString;
 			} catch (error) {
 				console.log(`No README.mound for ${packageReturn.githublink}`);

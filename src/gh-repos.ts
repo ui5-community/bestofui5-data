@@ -292,7 +292,8 @@ export default class GitHubRepositoriesProvider {
 			returnObject.markdown = markdown;
 			return returnObject;
 		} catch (error) {
-			console.log(error);
+			// red error log
+			console.log("\x1b[31m%s\x1b[0m", `Could not fetch file for jsdoc ${source.owner}/${source.repo}/${path}${entryPath}`);
 		}
 	}
 

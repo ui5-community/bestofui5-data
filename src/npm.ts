@@ -161,6 +161,7 @@ export default class NpmProvider {
 				source.updatedAt = metaData?.data?.time?.modified;
 				source.npmlink = `https://www.npmjs.com/package/${source.name}`;
 				source.versions = this.formatVersionToArray(metaData?.data?.time, source.npmlink);
+				source.license = metaData?.data?.license;
 			} catch (error) {
 				console.error(`Error fetching npm metadata for ${source.name}`);
 			}

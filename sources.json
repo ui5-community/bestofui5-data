@@ -209,5 +209,18 @@
     "addedToBoUI5": "2022-06-06T12:07:57.868Z",
     "type": "vscode",
     "tags": ["deployer", "builder"]
+  },
+  {
+    "owner": "sap",
+    "repo": "open-ux-odata",
+    "subpath": "packages",
+    "subpackages": [
+      {
+        "name": "ui5-middleware-fe-mockserver",
+        "addedToBoUI5": "2022-04-09T11:37:57.868Z",
+        "type": "middleware",
+        "tags": ["fiori", "odata", "proxy"]
+      }
+    ]
   }
 ]

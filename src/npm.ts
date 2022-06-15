@@ -144,7 +144,7 @@ export default class NpmProvider {
 					console.log("Error calculating growth", error);
 				}
 			} catch (error) {
-				console.error(`Error fetching npm downloads for ${source.name}`);
+				console.log("\x1b[31m%s\x1b[0m", `Error fetching npm downloads for ${source.name}`);
 				continue;
 			}
 			// get npm downloads history for each month

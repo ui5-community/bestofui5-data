@@ -222,5 +222,24 @@
         "tags": ["fiori", "odata", "proxy", "SAP"]
       }
     ]
+  },
+  {
+    "owner": "sap",
+    "repo": "open-ux-tools",
+    "subpath": "packages",
+    "subpackages": [
+      {
+        "name": "backend-proxy-middleware",
+        "addedToBoUI5": "2022-06-16T00:42:42.123Z",
+        "type": "middleware",
+        "tags": ["proxy", "SAP"]
+      },
+      {
+        "name": "ui5-proxy-middleware",
+        "addedToBoUI5": "2022-06-16T00:42:42.123Z",
+        "type": "middleware",
+        "tags": ["proxy", "SAP"]
+      }
+    ]
   }
 ]

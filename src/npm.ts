@@ -124,11 +124,11 @@ export default class NpmProvider {
 			// get downloads
 			try {
 				// packages with `@` are scoped packages are can not be in bulk API
-				if (source.name.charAt(0) === "@") {
-					downlodsPreviousFortnight = bulkDataPreviousFortnight.filter((d) => d.package === source.name)[0].downloads;
-					downlodsCurrentFortnight = bulkDataCurrentFortnight.filter((d) => d.package === source.name)[0].downloads;
-					downloadsMonth = bulkDataMonth.filter((d) => d.package === source.name)[0].downloads;
-					downloadsYear = bulkDataYear.filter((d) => d.package === source.name)[0].downloads;
+				if (source.name.charAt(0) !== "@") {
+					downlodsPreviousFortnight = bulkDataPreviousFortnight[<any>source.name].downloads;
+					downlodsCurrentFortnight = bulkDataCurrentFortnight[<any>source.name].downloads;
+					downloadsMonth = bulkDataMonth[<any>source.name].downloads;
+					downloadsYear = bulkDataYear[<any>source.name].downloads;
 				} else {
 					downlodsPreviousFortnight = await getDownloads(source.name, dates.lastFortnight);
 					downlodsCurrentFortnight = await getDownloads(source.name, dates.currentFortnight);
@@ -144,7 +144,7 @@ export default class NpmProvider {
 					console.log("Error calculating growth", error);
 				}
 			} catch (error) {
-				console.error(`Error fetching npm downloads for ${source.name}`);
+				console.log("\x1b[31m%s\x1b[0m", `Error fetching npm downloads for ${source.name}`);
 				continue;
 			}
 			// get npm downloads history for each month

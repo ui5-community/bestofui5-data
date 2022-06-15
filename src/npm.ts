@@ -144,7 +144,6 @@ export default class NpmProvider {
 					console.log("Error calculating growth", error);
 				}
 			} catch (error) {
-				console.log(error);
 				console.error(`Error fetching npm downloads for ${source.name}`);
 				continue;
 			}

@@ -96,7 +96,7 @@ export default class NpmProvider {
 		let downloadsYear = 0;
 
 		const bulkDownloads: IPackage[] = packages
-			.filter((p) => p.name.charAt(0) !== "@" && p.type !== "generator" && p.type !== "vscode")
+			.filter((p) => p.name.charAt(0) !== "@" && p.type !== "generator" && p.type !== "vscode" && p.type !== "application")
 			.map((p) => {
 				return p;
 			});
@@ -115,7 +115,7 @@ export default class NpmProvider {
 			console.log(`Getting npm downloads and metadata for ${source.name} package.`);
 			await sleep(Math.floor(idx / 20) * 1000);
 			// set values for generator because there is no npm package
-			if (source.type === "generator" || source.type === "vscode") {
+			if (source.type === "generator" || source.type === "vscode" || source.type === "application") {
 				source.downloadsCurrentMonth = -1;
 				source.downloadsCurrentFortnight = -1;
 				source.downloads365 = -1;

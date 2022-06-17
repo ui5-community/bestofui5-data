@@ -6,6 +6,7 @@ enum BoUI5Types {
 	module = "module",
 	generator = "generator",
 	vscode = "vscode",
+	application = "application",
 }
 
 export interface Ranking {

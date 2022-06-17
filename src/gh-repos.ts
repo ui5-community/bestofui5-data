@@ -87,18 +87,17 @@ export default class GitHubRepositoriesProvider {
 		});
 		packageObject.createdAt = repo.data.created_at;
 		// generator don´t have a npm module, get updatedat from last commit
-		if (source.type === "generator") {
+		if (source.type === "generator" || source.type === "application") {
 			try {
 				packageObject.updatedAt = await this.getLastCommitDate(source, repo.data.default_branch);
 			} catch (error) {
-				console.log(error);
-				console.log(`Error while fetching last commit date for ${source.path}`);
+				console.log("\x1b[31m%s\x1b[0m", `Error while fetching last commit date for ${source.path}`);
 				packageObject.updatedAt = repo.data.updated_at;
 			}
 			try {
 				await this.updateCloningStats(source);
 			} catch (error) {
-				console.log(error);
+				console.log("\x1b[31m%s\x1b[0m", `Error while fetching cloning stats for ${source.path}`);
 			}
 		} else {
 			packageObject.updatedAt = repo.data.updated_at;
@@ -292,8 +291,7 @@ export default class GitHubRepositoriesProvider {
 			returnObject.markdown = markdown;
 			return returnObject;
 		} catch (error) {
-			// red error log
-			console.log("\x1b[31m%s\x1b[0m", `Could not fetch file for jsdoc ${source.owner}/${source.repo}/${path}${entryPath}`);
+			console.log(error);
 		}
 	}
 

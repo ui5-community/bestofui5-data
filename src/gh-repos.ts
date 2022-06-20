@@ -136,7 +136,7 @@ export default class GitHubRepositoriesProvider {
 			packageReturn.updatedAt = repoInfo.updatedAt;
 			packageReturn.vscodeInstalls = -1;
 
-			packageReturn.githublink = `${repoInfo.githublink}/tree/main/${path}`;
+			packageReturn.githublink = `${repoInfo.githublink}/tree/${repoInfo.defaultBranch}/${path}`;
 			try {
 				const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
 					mediaType: {
@@ -147,7 +147,7 @@ export default class GitHubRepositoriesProvider {
 					path: `${path}README.md`,
 				});
 				let readmeString = readme.data.toString();
-				readmeString = readmeString.replace('<img src="', `<img src="https://raw.githubusercontent.com/${source.owner}/${source.repo}/main/`);
+				readmeString = readmeString.replace('<img src="', `<img src="https://raw.githubusercontent.com/${source.owner}/${source.repo}/${repoInfo.defaultBranch}/`);
 				packageReturn.readme = readmeString;
 			} catch (error) {
 				console.log(`No README.mound for ${packageReturn.githublink}`);

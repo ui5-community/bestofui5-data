@@ -170,6 +170,13 @@
   },
   {
     "owner": "ui5-community",
+    "repo": "create-wdi5",
+    "addedToBoUI5": "2022-06-21T11:00:00.007Z",
+    "type": "module",
+    "tags": ["generator"]
+  },
+  {
+    "owner": "ui5-community",
     "repo": "generator-ui5-ts-app-fcl",
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "generator",

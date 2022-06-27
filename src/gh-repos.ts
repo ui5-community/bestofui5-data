@@ -129,6 +129,7 @@ export default class GitHubRepositoriesProvider {
 			packageReturn.gitHubOwner = source.owner;
 			packageReturn.gitHubRepo = source.repo;
 			packageReturn.license = repoInfo.license;
+			packageReturn.licenseSource = sourcePackage.license;
 			packageReturn.forks = repoInfo.forks;
 			packageReturn.stars = repoInfo.stars;
 			packageReturn.addedToBoUI5 = sourcePackage.addedToBoUI5;

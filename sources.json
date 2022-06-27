@@ -8,121 +8,141 @@
         "name": "ui5-middleware-cfdestination",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["btp", "ui5-ecosystem-showcase"]
+        "tags": ["btp", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-iasync",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["browser", "ui5-ecosystem-showcase"]
+        "tags": ["browser", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-index",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["browser", "ui5-ecosystem-showcase"]
+        "tags": ["browser", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-livecompileless",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["css", "ui5-ecosystem-showcase"]
+        "tags": ["css", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-livereload",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["livereload", "ui5-ecosystem-showcase"]
+        "tags": ["livereload", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-livetranspile",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["transpile", "ui5-ecosystem-showcase"]
+        "tags": ["transpile", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-onelogin",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["auth", "ui5-ecosystem-showcase"]
+        "tags": ["auth", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-servestatic",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["proxy", "ui5-ecosystem-showcase"]
+        "tags": ["proxy", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-simpleproxy",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["proxy", "ui5-ecosystem-showcase"]
+        "tags": ["proxy", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-stringreplacer",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["replace", "ui5-ecosystem-showcase"]
+        "tags": ["replace", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-middleware-webjars",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "middleware",
-        "tags": ["webjars", "ui5-ecosystem-showcase"]
+        "tags": ["webjars", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-task-compileless",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["css", "ui5-ecosystem-showcase"]
+        "tags": ["css", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-task-flatten-library",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["netweaver", "ui5-ecosystem-showcase"]
+        "tags": ["netweaver", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-task-i18ncheck",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["i18n", "ui5-ecosystem-showcase"]
+        "tags": ["i18n", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-task-minify-xml",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["minify", "ui5-ecosystem-showcase"]
+        "tags": ["minify", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-task-pwa-enabler",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["pwa", "ui5-ecosystem-showcase"]
+        "tags": ["pwa", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-task-stringreplacer",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["replace", "ui5-ecosystem-showcase"]
+        "tags": ["replace", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-task-transpile",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["transpiile", "ui5-ecosystem-showcase"]
+        "tags": ["transpiile", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-task-zipper",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "task",
-        "tags": ["zip", "ui5-ecosystem-showcase"]
+        "tags": ["zip", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       },
       {
         "name": "ui5-tooling-modules",
         "addedToBoUI5": "2022-04-09T11:37:57.868Z",
         "type": "tooling",
-        "tags": ["tooling", "ui5-ecosystem-showcase"]
+        "tags": ["tooling", "ui5-ecosystem-showcase"],
+        "license": "beer-ware"
       }
     ]
   },
@@ -131,84 +151,96 @@
     "repo": "ui5-cc-md",
     "addedToBoUI5": "2022-04-09T11:37:57.868Z",
     "type": "customControl",
-    "tags": ["markdown"]
+    "tags": ["markdown"],
+    "license": "beer-ware"
   },
   {
     "owner": "ui5-community",
     "repo": "ui5-cc-chart",
     "addedToBoUI5": "2022-05-12T13:37:57.868Z",
     "type": "customControl",
-    "tags": ["chart"]
+    "tags": ["chart"],
+    "license": "beer-ware"
   },
   {
     "owner": "js-soft",
     "repo": "wdi5",
     "addedToBoUI5": "2022-04-12T00:00:00.007Z",
     "type": "module",
-    "tags": ["testing", "wdi5"]
+    "tags": ["testing", "wdi5"],
+    "license": "apache-2.0"
   },
   {
     "owner": "ui5-community",
     "repo": "generator-ui5-project",
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "generator",
-    "tags": ["project"]
+    "tags": ["project"],
+    "license": "apache-2.0"
   },
   {
     "owner": "ui5-community",
     "repo": "generator-ui5-ts-app",
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "generator",
-    "tags": ["typescript"]
+    "tags": ["typescript"],
+    "license": "apache-2.0"
   },
   {
     "owner": "ui5-community",
     "repo": "create-easy-ui5",
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "module",
-    "tags": ["generator"]
+    "tags": ["generator"],
+    "license": "apache-2.0"
   },
   {
     "owner": "ui5-community",
     "repo": "generator-ui5-ts-app-fcl",
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "generator",
-    "tags": ["typescript"]
+    "tags": ["typescript"],
+    "license": "apache-2.0"
   },
   {
     "owner": "ui5-community",
     "repo": "generator-ui5-flp-plugin",
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "generator",
-    "tags": ["flp"]
+    "tags": ["flp"],
+    "license": "apache-2.0"
   },
   {
     "owner": "ui5-community",
     "repo": "generator-ui5-library",
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "generator",
-    "tags": ["library"]
+    "tags": ["library"],
+    "license": "mit"
   },
   {
     "owner": "ui5-community",
     "repo": "generator-ui5-control",
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "generator",
-    "tags": ["control"]
+    "tags": ["control"],
+    "license": "beer-ware"
   },
   {
     "owner": "mauriciolauffer",
     "repo": "openui5-model-odata-v2-odatamodelpromise",
     "addedToBoUI5": "2022-06-06T12:07:57.868Z",
     "type": "customControl",
-    "tags": ["odata", "promise"]
+    "tags": ["odata", "promise"],
+    "license": "mit"
   },
   {
     "owner": "CarlosOrozco88",
     "repo": "ui5-tools",
     "addedToBoUI5": "2022-06-06T12:07:57.868Z",
     "type": "vscode",
-    "tags": ["deployer", "builder"]
+    "tags": ["deployer", "builder"],
+    "license": "apache-2.0"
   },
   {
     "owner": "sap",
@@ -219,7 +251,8 @@
         "name": "ui5-middleware-fe-mockserver",
         "addedToBoUI5": "2022-06-15T00:42:42.123Z",
         "type": "middleware",
-        "tags": ["fiori", "odata", "proxy", "SAP"]
+        "tags": ["fiori", "odata", "proxy", "SAP"],
+        "license": "apache-2.0"
       }
     ]
   },
@@ -232,13 +265,15 @@
         "name": "backend-proxy-middleware",
         "addedToBoUI5": "2022-06-16T00:42:42.123Z",
         "type": "middleware",
-        "tags": ["proxy", "SAP"]
+        "tags": ["proxy", "SAP"],
+        "license": "apache-2.0"
       },
       {
         "name": "ui5-proxy-middleware",
         "addedToBoUI5": "2022-06-16T00:42:42.123Z",
         "type": "middleware",
-        "tags": ["proxy", "SAP"]
+        "tags": ["proxy", "SAP"],
+        "license": "apache-2.0"
       }
     ]
   },
@@ -247,13 +282,15 @@
     "repo": "openui5-sample-app",
     "addedToBoUI5": "2022-06-17T12:47:57.868Z",
     "type": "application",
-    "tags": ["sample", "typescript", "SAP"]
+    "tags": ["sample", "typescript", "SAP"],
+    "license": "apache-2.0"
   },
   {
     "owner": "SAP-samples",
     "repo": "ui5-typescript-helloworld",
     "addedToBoUI5": "2022-06-17T12:47:58.868Z",
     "type": "application",
-    "tags": ["sample", "SAP"]
+    "tags": ["sample", "SAP"],
+    "license": "apache-2.0"
   }
 ]

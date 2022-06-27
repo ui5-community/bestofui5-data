@@ -8,6 +8,7 @@ export default class Package implements IPackage {
 	description: string;
 	author: string;
 	license: string;
+	licenseSource: string;
 	main?: string;
 	jsdoc?: any;
 	type: string;

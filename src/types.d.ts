@@ -9,6 +9,12 @@ enum BoUI5Types {
 	application = "application",
 }
 
+enum License {
+	beerware = "beer-ware",
+	apache2 = "apache-2.0",
+	mit = "mit",
+}
+
 export interface Ranking {
 	id: string;
 	name: string;
@@ -35,6 +41,7 @@ export interface IPackage {
 	description: string;
 	author: string;
 	license: string;
+	licenseSource: string;
 	main?: string;
 	jsdoc?: any;
 	type: string;
@@ -76,6 +83,7 @@ export interface Source {
 	subpackages?: SubPackage[];
 	type: BoUI5Types;
 	tags: string[];
+	license: License;
 }
 
 export interface SubPackage {
@@ -83,6 +91,7 @@ export interface SubPackage {
 	addedToBoUI5: string;
 	type: BoUI5Types;
 	tags: string[];
+	license: License;
 }
 
 export interface DataJson {

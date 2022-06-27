@@ -26,6 +26,7 @@ import { IPackage, Source, Tags, DataJson } from "./types";
 	const typesArray: Tags[] = [];
 	const tagsArray: Tags[] = [];
 	const versionsArray: any[] = [];
+	const licenseArray: any[] = [];
 	for (const packageContent of githubPackages) {
 		const typeExists: Tags = typesArray.find((typeObj) => typeObj.name === packageContent.type);
 		if (!typeExists) {
@@ -51,6 +52,17 @@ import { IPackage, Source, Tags, DataJson } from "./types";
 				tagExists.count += 1;
 			}
 		}
+		const licenseExists: Tags = licenseArray.find((typeObj) => typeObj.name === packageContent.licenseSource);
+		if (!licenseExists) {
+			const licenseObj: Tags = {
+				name: packageContent.licenseSource,
+				count: 1,
+				type: "license",
+			};
+			licenseArray.push(licenseObj);
+		} else {
+			licenseExists.count += 1;
+		}
 		// create verions array
 		if (packageContent.versions) {
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
@@ -68,7 +80,7 @@ import { IPackage, Source, Tags, DataJson } from "./types";
 	}
 
 	dataJson.packages = githubPackages;
-	dataJson.tags = typesArray.concat(tagsArray);
+	dataJson.tags = typesArray.concat(tagsArray).concat(licenseArray);
 
 	writeFileSync(`${__dirname}/../data/data.json`, JSON.stringify(dataJson));
 	writeFileSync(`${__dirname}/../data/versions.json`, JSON.stringify(versionsArray));

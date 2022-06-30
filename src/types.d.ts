@@ -113,7 +113,8 @@ export interface Params {
 	type: string;
 	description: string;
 	name: string;
-	optional: boolean;
+	optional?: boolean;
+	env?: string;
 }
 
 export interface UI5Yaml {

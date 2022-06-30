@@ -280,11 +280,13 @@ export default class GitHubRepositoriesProvider {
 						optional: false,
 					};
 					param.name = property.name as string;
-					param.description = property.description as string;
+					const descripArray = property.description.split("=>");
+					param.description = descripArray[0] as string;
 					param.optional = property.optional as boolean;
 					param.type = yoTypeRegex.test(property.type.names.find((name: string) => name.includes("yo")))
 						? yoTypeRegex.exec(property.type.names.find((name: string) => name.includes("yo")))[0]
 						: "input";
+					param["env"] = descripArray?.[2]?.replace(/(.*)env:/, "") as string;
 					arr.push(param);
 				});
 				returnObject.params = arr;

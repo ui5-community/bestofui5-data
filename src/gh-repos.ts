@@ -286,7 +286,7 @@ export default class GitHubRepositoriesProvider {
 					param.type = yoTypeRegex.test(property.type.names.find((name: string) => name.includes("yo")))
 						? yoTypeRegex.exec(property.type.names.find((name: string) => name.includes("yo")))[0]
 						: "input";
-					param["env"] = descripArray?.[2]?.replace(/(.*)env:/, "") as string;
+					param["env"] = descripArray?.[1]?.replace(/(.*)env:/, "") as string;
 					arr.push(param);
 				});
 				returnObject.params = arr;

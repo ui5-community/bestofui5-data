@@ -288,7 +288,7 @@ export default class GitHubRepositoriesProvider {
 					param.default = yoType?.[1] || "";
 					param.type = yoType[0];
 
-					param["env"] = descripArray?.[1]?.replace(/(.*)env:/, "") as string;
+					param.env = descripArray?.[1]?.replace(/(.*)env:/, "") as string;
 					arr.push(param);
 				});
 				returnObject.params = arr;

@@ -300,5 +300,13 @@
     "type": "application",
     "tags": ["sample", "SAP"],
     "license": "apache-2.0"
+  },
+  {
+    "owner": "preetamkajalrout",
+    "repo": "ui5-middleware-destination",
+    "addedToBoUI5": "2022-07-08T14:13:43.858Z",
+    "type": "middleware",
+    "tags": ["proxy", "neo", "WebIDEUsage", "destination"],
+    "license": "MIT"
   }
 ]

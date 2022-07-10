@@ -17,7 +17,7 @@ Please make sure you meet these requirements first:
 
 ## Pull Request
 
-After checking the prerequisites, you can create a pull request, to edit [`source.json`](https://github.com/ui5-community/bestofui5-website/blob/main/packages/crawler/sources.json) with the following content:
+After checking the prerequisites, you can create a pull request, to edit [`sources.json`](https://github.com/ui5-community/bestofui5-data/blob/main/sources.json) with the following content:
 
 For example, if you want to add the module `https://github.com/ui5-community/ui5-cc-md`, your commit would look like this:
 

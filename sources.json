@@ -300,5 +300,11 @@
     "type": "application",
     "tags": ["sample", "SAP"],
     "license": "apache-2.0"
+  },{
+    "owner": "ui5-community",
+    "repo": "hacking-away-sampleapp",
+    "addedToBoUI5": "2022-07-12T11:37:57.868Z",
+    "type": "application",
+    "tags": ["sample","TypeScript","UI5con2022"]
   }
 ]

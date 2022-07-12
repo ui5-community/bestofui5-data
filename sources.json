@@ -307,5 +307,13 @@
     "type": "application",
     "tags": ["sample","typescript","UI5con2022"],
     "license": "apache-2.0"
+  },
+  {
+    "owner": "pinakipatrapro",
+    "repo": "ui5-cc-dndashboard",
+    "addedToBoUI5": "2022-07-12T21:12:59.124Z",
+    "type": "customControl",
+    "tags": ["Dashboard","Drag","Drop","Library"],
+    "license": "mit"
   }
 ]

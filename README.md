@@ -10,7 +10,7 @@ Just create a [issue with this template in the `bestofui5-data repo`](https://gi
 ## Description
 
 The crawler is written in Typescript and will get the latest data every day with a GitHub action worklow.  
-It will look at every package defined in the [`source.json`](https://github.com/ui5-community/bestofui5-data/blob/main/sources.json) file.  
+It will look at every package defined in the [`sources.json`](https://github.com/ui5-community/bestofui5-data/blob/main/sources.json) file.
 Currently it´s looking at data from GitHub and NPM.  
 If you´re looking for the latest data files, they are in the `live-data` branch and in the [`data`](https://github.com/ui5-community/bestofui5-data/tree/live-data/data) folder.  
 

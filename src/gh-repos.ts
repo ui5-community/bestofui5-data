@@ -108,6 +108,7 @@ export default class GitHubRepositoriesProvider {
 		packageObject.stars = repo.data.stargazers_count;
 		packageObject.license = repo.data.license.key;
 		packageObject.defaultBranch = repo.data.default_branch;
+		packageObject.description = repo.data.description;
 		return packageObject;
 	}
 
@@ -124,6 +125,7 @@ export default class GitHubRepositoriesProvider {
 			});
 			const string = data.data.toString();
 			packageReturn = JSON.parse(string) as Package;
+			packageReturn.description = packageReturn.description || repoInfo.description; // prefer description from package.json
 			packageReturn.type = sourcePackage.type;
 			packageReturn.tags = sourcePackage.tags;
 			packageReturn.gitHubOwner = source.owner;

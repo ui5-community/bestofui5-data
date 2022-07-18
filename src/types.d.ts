@@ -1,4 +1,5 @@
 enum BoUI5Types {
+	library = "library",
 	task = "task",
 	middleware = "middleware",
 	tooling = "tooling",

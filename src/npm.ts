@@ -225,6 +225,7 @@ export default class NpmProvider {
 				version: key,
 				date: value as string,
 				link: `${npmlink}/v/${key}`,
+				changelog: "",
 			});
 		}
 		return versions;

@@ -66,6 +66,7 @@ export interface IPackage {
 	downloadsHistory?: PackageDownloadsHistory[];
 	versions?: NPMVersions[];
 	gitHubContributors?: Contributor[];
+	subPath?: string;
 }
 
 export interface Tags {
@@ -159,6 +160,7 @@ export interface NPMVersions {
 	date: string;
 	version: string;
 	link: string;
+	changelog: string;
 }
 
 export interface ClonesJson {

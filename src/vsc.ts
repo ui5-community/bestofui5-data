@@ -49,6 +49,7 @@ export default class VSCProvider {
 				version: version.version,
 				date: version.lastUpdated,
 				link: `https://marketplace.visualstudio.com/items/${vsCodePackage.publisher}.${vsCodePackage.name}/changelog`,
+				changelog: "",
 			};
 			versions.push(versionObject);
 		}

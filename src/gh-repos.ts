@@ -4,9 +4,10 @@ import { throttling } from "@octokit/plugin-throttling";
 const MyOctokit = Octokit.plugin(throttling);
 import * as jsdoc2md from "jsdoc-to-markdown";
 import * as yaml from "js-yaml";
+import * as changelogparser from "changelog-parser";
 import { readFileSync, writeFileSync } from "fs";
 
-import { ClonesJson, Contributor, IPackage, Jsdoc, JsdocType, Params, Source, SubPackage, UI5Yaml } from "./types";
+import { ClonesJson, Contributor, IPackage, Jsdoc, JsdocType, NPMVersions, Params, Source, SubPackage, UI5Yaml } from "./types";
 import Package from "./Package";
 
 export default class GitHubRepositoriesProvider {
@@ -48,6 +49,7 @@ export default class GitHubRepositoriesProvider {
 					const path = `${source.subpath}/${subpackage.name}/`;
 					console.log(`Fetching GitHub Data from ${source.owner}/${source.repo}/${source.subpath}/${subpackage.name}/`);
 					const packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
+					packageInfo.subPath = path;
 
 					if (packageInfo.type === "task" || packageInfo.type === "middleware" || packageInfo.type === "tooling") {
 						try {
@@ -336,5 +338,69 @@ export default class GitHubRepositoriesProvider {
 				}
 			}
 		}
+	}
+
+	static async getChangelog(sources: Source[], packages: IPackage[], versions: any[]): Promise<IPackage[]> {
+		for (const source of sources) {
+			source.path = `${source.owner}/${source.repo}`;
+
+			if (source.subpath && source.subpackages) {
+				for (const subpackage of source.subpackages) {
+					const path = `${source.subpath}/${subpackage.name}/`;
+					try {
+						const changelogFile = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
+							mediaType: {
+								format: "raw",
+							},
+							owner: source.owner,
+							repo: source.repo,
+							path: `${path}CHANGELOG.md`,
+						});
+						const parsedChangelog = await changelogparser({
+							text: changelogFile.data.toString(),
+							removeMarkdown: false, // default: true
+						});
+						// get package with with repo name and owner
+						const packageToUpdate = packages.find(
+							(packageFind: IPackage) => packageFind.gitHubRepo === source.repo && packageFind.gitHubOwner === source.owner && packageFind.subPath === path
+						);
+						const versionToUpdate = versions.find((versionFind: any) => versionFind.name === packageToUpdate.name);
+						for (const changelog of parsedChangelog.versions) {
+							const versionToUpdate = versions.find((versionFind: any) => versionFind.name === packageToUpdate.name && versionFind.version === changelog.version);
+							if (versionToUpdate) {
+								versionToUpdate.changelog = changelog.body;
+							}
+						}
+					} catch (error) {
+						console.log("\x1b[31m%s\x1b[0m", `CHANGELOG.md not found for ${source.owner}/${source.repo}/${subpackage.name}`);
+					}
+				}
+			} else {
+				try {
+					const changelogFile = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
+						mediaType: {
+							format: "raw",
+						},
+						owner: source.owner,
+						repo: source.repo,
+						path: `CHANGELOG.md`,
+					});
+					const parsedChangelog = await changelogparser({
+						text: changelogFile.data.toString(),
+						removeMarkdown: false, // default: true
+					});
+					const packageToUpdate = packages.find((packageFind: IPackage) => packageFind.gitHubRepo === source.repo && packageFind.gitHubOwner === source.owner);
+					for (const changelog of parsedChangelog.versions) {
+						const versionToUpdate = versions.find((versionFind: any) => versionFind.name === packageToUpdate.name && versionFind.version === changelog.version);
+						if (versionToUpdate) {
+							versionToUpdate.changelog = changelog.body;
+						}
+					}
+				} catch (error) {
+					console.log("\x1b[31m%s\x1b[0m", `CHANGELOG.md not found for ${source.owner}/${source.repo}`);
+				}
+			}
+		}
+		return packages;
 	}
 }

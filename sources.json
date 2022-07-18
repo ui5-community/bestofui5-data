@@ -238,15 +238,15 @@
     "owner": "mauriciolauffer",
     "repo": "openui5-model-odata-v2-odatamodelpromise",
     "addedToBoUI5": "2022-06-06T12:07:57.868Z",
-    "type": "customControl",
-    "tags": ["odata", "promise"],
+    "type": "library",
+    "tags": ["model", "odata", "promise"],
     "license": "mit"
   },
   {
     "owner": "mauriciolauffer",
     "repo": "https://github.com/mauriciolauffer/openui5-error-collector",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
-    "type": "customControl",
+    "type": "module",
     "tags": ["error","collector","exception","log","event"],
     "license": "mit"
   },
@@ -254,7 +254,7 @@
     "owner": "mauriciolauffer",
     "repo": "https://github.com/mauriciolauffer/openui5-smart-mockserver",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
-    "type": "customControl",
+    "type": "library",
     "tags": ["mock","mockserver","mockdata","faker","fake","smart","smarter"],
     "license": "mit"
   },
@@ -262,7 +262,7 @@
     "owner": "mauriciolauffer",
     "repo": "https://github.com/mauriciolauffer/openui5-tour",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
-    "type": "customControl",
+    "type": "library",
     "tags": ["tour","guide","intro","showcase"],
     "license": "mit"
   },
@@ -270,7 +270,7 @@
     "owner": "mauriciolauffer",
     "repo": "https://github.com/mauriciolauffer/openui5-model-json-crud",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
-    "type": "customControl",
+    "type": "library",
     "tags": ["model","JSON","CRUD"],
     "license": "mit"
   },
@@ -278,7 +278,7 @@
     "owner": "mauriciolauffer",
     "repo": "https://github.com/mauriciolauffer/openui5-validator",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
-    "type": "customControl",
+    "type": "library",
     "tags": ["validate","validator","validation"],
     "license": "mit"
   },
@@ -286,7 +286,7 @@
     "owner": "mauriciolauffer",
     "repo": "https://github.com/mauriciolauffer/openui5-password",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
-    "type": "customControl",
+    "type": "library",
     "tags": ["password","input","control"],
     "license": "mit"
   },

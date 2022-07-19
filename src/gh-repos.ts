@@ -141,6 +141,11 @@ export default class GitHubRepositoriesProvider {
 			packageReturn.updatedAt = repoInfo.updatedAt;
 			packageReturn.vscodeInstalls = -1;
 
+			// check if author is a object
+			if (packageReturn.author && typeof packageReturn.author === "object") {
+				packageReturn.author = packageReturn.author["name"];
+			}
+
 			packageReturn.githublink = `${repoInfo.githublink}/tree/${repoInfo.defaultBranch}/${path}`;
 			try {
 				const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({

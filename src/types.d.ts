@@ -68,6 +68,7 @@ export interface IPackage {
 	versions?: NPMVersions[];
 	gitHubContributors?: Contributor[];
 	subPath?: string;
+	liveDemoUrl: string;
 }
 
 export interface Tags {
@@ -86,6 +87,7 @@ export interface Source {
 	type: BoUI5Types;
 	tags: string[];
 	license: License;
+	liveDemoUrl: string;
 }
 
 export interface SubPackage {

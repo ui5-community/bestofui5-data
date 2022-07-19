@@ -130,6 +130,7 @@ export default class GitHubRepositoriesProvider {
 			packageReturn.description = packageReturn.description || repoInfo.description; // prefer description from package.json
 			packageReturn.type = sourcePackage.type;
 			packageReturn.tags = sourcePackage.tags;
+			packageReturn.liveDemoUrl = source.liveDemoUrl;
 			packageReturn.gitHubOwner = source.owner;
 			packageReturn.gitHubRepo = source.repo;
 			packageReturn.license = repoInfo.license;

@@ -398,5 +398,14 @@
     "type": "middleware",
     "tags": ["proxy", "neo", "WebIDEUsage", "destination"],
     "license": "MIT"
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "bestofui5-website",
+    "addedToBoUI5": "2022-07-20T12:47:57.868Z",
+    "type": "application",
+    "tags": ["sample", "typescript"],
+    "license": "apache-2.0",
+    "liveDemoUrl": "https://bestofui5.org/"
   }
 ]

@@ -294,7 +294,7 @@
     "owner": "mauriciolauffer",
     "repo": "https://github.com/mauriciolauffer/ui5-deployer",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
-    "type": "tooling",
+    "type": "command",
     "tags": ["deploy","deployment","deployer","development","tool"],
     "license": "Apache-2.0"
   },

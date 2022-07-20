@@ -238,8 +238,80 @@
     "owner": "mauriciolauffer",
     "repo": "openui5-model-odata-v2-odatamodelpromise",
     "addedToBoUI5": "2022-06-06T12:07:57.868Z",
-    "type": "customControl",
-    "tags": ["odata", "promise"],
+    "type": "library",
+    "tags": ["model", "odata", "promise"],
+    "license": "mit"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "openui5-error-collector",
+    "addedToBoUI5": "2022-07-10T11:52:00.000Z",
+    "type": "module",
+    "tags": ["error", "collector", "exception", "log", "event"],
+    "license": "mit"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "openui5-smart-mockserver",
+    "addedToBoUI5": "2022-07-10T11:52:00.000Z",
+    "type": "library",
+    "tags": ["mock", "mockserver", "mockdata", "faker", "fake", "smart", "smarter"],
+    "license": "mit"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "openui5-tour",
+    "addedToBoUI5": "2022-07-10T11:52:00.000Z",
+    "type": "library",
+    "tags": ["tour", "guide", "intro", "showcase"],
+    "license": "mit"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "openui5-model-json-crud",
+    "addedToBoUI5": "2022-07-10T11:52:00.000Z",
+    "type": "library",
+    "tags": ["model", "JSON", "CRUD"],
+    "license": "mit"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "openui5-validator",
+    "addedToBoUI5": "2022-07-10T11:52:00.000Z",
+    "type": "library",
+    "tags": ["validate", "validator", "validation"],
+    "license": "mit"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "openui5-password",
+    "addedToBoUI5": "2022-07-10T11:52:00.000Z",
+    "type": "library",
+    "tags": ["password", "input", "control"],
+    "license": "mit"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "ui5-deployer",
+    "addedToBoUI5": "2022-07-10T11:52:00.000Z",
+    "type": "command",
+    "tags": ["deploy", "deployment", "deployer", "development", "tool"],
+    "license": "Apache-2.0"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "ui5-task-dts-generator",
+    "addedToBoUI5": "2022-07-10T11:52:00.000Z",
+    "type": "task",
+    "tags": ["builder", "tooling", "dts", "typescript", "types"],
+    "license": "mit"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "ui5-task-minifier",
+    "addedToBoUI5": "2022-07-10T11:52:00.000Z",
+    "type": "task",
+    "tags": ["builder", "minify", "minifier", "uglify", "css", "html", "json"],
     "license": "mit"
   },
   {

@@ -244,74 +244,74 @@
   },
   {
     "owner": "mauriciolauffer",
-    "repo": "https://github.com/mauriciolauffer/openui5-error-collector",
+    "repo": "openui5-error-collector",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "module",
-    "tags": ["error","collector","exception","log","event"],
+    "tags": ["error", "collector", "exception", "log", "event"],
     "license": "mit"
   },
   {
     "owner": "mauriciolauffer",
-    "repo": "https://github.com/mauriciolauffer/openui5-smart-mockserver",
+    "repo": "openui5-smart-mockserver",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "library",
-    "tags": ["mock","mockserver","mockdata","faker","fake","smart","smarter"],
+    "tags": ["mock", "mockserver", "mockdata", "faker", "fake", "smart", "smarter"],
     "license": "mit"
   },
   {
     "owner": "mauriciolauffer",
-    "repo": "https://github.com/mauriciolauffer/openui5-tour",
+    "repo": "openui5-tour",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "library",
-    "tags": ["tour","guide","intro","showcase"],
+    "tags": ["tour", "guide", "intro", "showcase"],
     "license": "mit"
   },
   {
     "owner": "mauriciolauffer",
-    "repo": "https://github.com/mauriciolauffer/openui5-model-json-crud",
+    "repo": "openui5-model-json-crud",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "library",
-    "tags": ["model","JSON","CRUD"],
+    "tags": ["model", "JSON", "CRUD"],
     "license": "mit"
   },
   {
     "owner": "mauriciolauffer",
-    "repo": "https://github.com/mauriciolauffer/openui5-validator",
+    "repo": "openui5-validator",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "library",
-    "tags": ["validate","validator","validation"],
+    "tags": ["validate", "validator", "validation"],
     "license": "mit"
   },
   {
     "owner": "mauriciolauffer",
-    "repo": "https://github.com/mauriciolauffer/openui5-password",
+    "repo": "openui5-password",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "library",
-    "tags": ["password","input","control"],
+    "tags": ["password", "input", "control"],
     "license": "mit"
   },
   {
     "owner": "mauriciolauffer",
-    "repo": "https://github.com/mauriciolauffer/ui5-deployer",
+    "repo": "ui5-deployer",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "command",
-    "tags": ["deploy","deployment","deployer","development","tool"],
+    "tags": ["deploy", "deployment", "deployer", "development", "tool"],
     "license": "Apache-2.0"
   },
   {
     "owner": "mauriciolauffer",
-    "repo": "https://github.com/mauriciolauffer/ui5-task-dts-generator",
+    "repo": "ui5-task-dts-generator",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "task",
-    "tags": ["builder","tooling","dts","typescript","types"],
+    "tags": ["builder", "tooling", "dts", "typescript", "types"],
     "license": "mit"
   },
   {
     "owner": "mauriciolauffer",
-    "repo": "https://github.com/mauriciolauffer/ui5-task-minifier",
+    "repo": "ui5-task-minifier",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "task",
-    "tags": ["builder","minify","minifier","uglify","css","html","json"],
+    "tags": ["builder", "minify", "minifier", "uglify", "css", "html", "json"],
     "license": "mit"
   },
   {

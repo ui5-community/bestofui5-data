@@ -8,6 +8,7 @@ enum BoUI5Types {
 	generator = "generator",
 	vscode = "vscode",
 	application = "application",
+	command = "command",
 }
 
 enum License {

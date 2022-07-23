@@ -97,6 +97,7 @@ export interface SubPackage {
 	type: BoUI5Types;
 	tags: string[];
 	license: License;
+	liveDemoUrl: string;
 }
 
 export interface DataJson {

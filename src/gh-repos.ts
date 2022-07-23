@@ -42,7 +42,7 @@ export default class GitHubRepositoriesProvider {
 		for (const source of sources) {
 			source.path = `${source.owner}/${source.repo}`;
 
-			if (source.subpath && source.subpackages) {
+			if (source.subpackages) {
 				const repoInfo = await this.getRepoInfo(source);
 				contributors = await this.fetchGitHubContributors(source, contributors);
 				for (const subpackage of source.subpackages) {
@@ -130,7 +130,7 @@ export default class GitHubRepositoriesProvider {
 			packageReturn.description = packageReturn.description || repoInfo.description; // prefer description from package.json
 			packageReturn.type = sourcePackage.type;
 			packageReturn.tags = sourcePackage.tags;
-			packageReturn.liveDemoUrl = source.liveDemoUrl;
+			packageReturn.liveDemoUrl = source.liveDemoUrl || sourcePackage.liveDemoUrl;
 			packageReturn.gitHubOwner = source.owner;
 			packageReturn.gitHubRepo = source.repo;
 			packageReturn.license = repoInfo.license;
@@ -161,7 +161,26 @@ export default class GitHubRepositoriesProvider {
 				readmeString = readmeString.replace('<img src="', `<img src="https://raw.githubusercontent.com/${source.owner}/${source.repo}/${repoInfo.defaultBranch}/`);
 				packageReturn.readme = readmeString;
 			} catch (error) {
-				console.log(`No README.mound for ${packageReturn.githublink}`);
+				// if no readme found in subpackage, try root to get any readme
+				if (sourcePackage) {
+					try {
+						const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
+							mediaType: {
+								format: "raw",
+							},
+							owner: source.owner,
+							repo: source.repo,
+							path: `README.md`,
+						});
+						let readmeString = readme.data.toString();
+						readmeString = readmeString.replace('<img src="', `<img src="https://raw.githubusercontent.com/${source.owner}/${source.repo}/${repoInfo.defaultBranch}/`);
+						packageReturn.readme = readmeString;
+					} catch (error) {
+						console.log(`No README.mound for ${packageReturn.githublink}`);
+					}
+				} else {
+					console.log(`No README.mound for ${packageReturn.githublink}`);
+				}
 			}
 		} catch (error) {
 			console.log(error);

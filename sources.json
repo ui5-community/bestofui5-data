@@ -407,5 +407,37 @@
     "tags": ["sample", "typescript"],
     "license": "apache-2.0",
     "liveDemoUrl": "https://bestofui5.org/"
+  },
+  {
+    "owner": "SAP-samples",
+    "repo": "cap-sflight",
+    "addedToBoUI5": "2022-07-20T12:47:57.868Z",
+    "type": "application",
+    "tags": ["CAP", "typescript"],
+    "license": "apache-2.0",
+    "liveDemoUrl": "https://cap-sflight.bestofui5.org/"
+  },
+  {
+    "owner": "SAP-samples",
+    "repo": "cloud-cap-samples",
+    "subpath": "",
+    "subpackages": [
+      {
+        "name": "fiori",
+        "addedToBoUI5": "2022-06-16T00:42:42.123Z",
+        "type": "application",
+        "tags": ["CAP", "SAP"],
+        "license": "apache-2.0",
+        "liveDemoUrl": "https://cloud-cap-samples-fiori.bestofui5.org/"
+      },
+      {
+        "name": "orders",
+        "addedToBoUI5": "2022-06-16T00:42:42.123Z",
+        "type": "application",
+        "tags": ["CAP", "SAP"],
+        "license": "apache-2.0",
+        "liveDemoUrl": "https://cloud-cap-samples-orders.bestofui5.org/"
+      }
+    ]
   }
 ]

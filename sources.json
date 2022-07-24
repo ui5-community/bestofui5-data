@@ -411,9 +411,9 @@
   {
     "owner": "SAP-samples",
     "repo": "cap-sflight",
-    "addedToBoUI5": "2022-07-20T12:47:57.868Z",
+    "addedToBoUI5": "2022-07-23T09:47:57.868Z",
     "type": "application",
-    "tags": ["CAP", "typescript"],
+    "tags": ["CAP", "typescript", "sample"],
     "license": "apache-2.0",
     "liveDemoUrl": "https://cap-sflight.bestofui5.org/"
   },
@@ -424,20 +424,29 @@
     "subpackages": [
       {
         "name": "fiori",
-        "addedToBoUI5": "2022-06-16T00:42:42.123Z",
+        "addedToBoUI5": "2022-07-23T09:47:57.868Z",
         "type": "application",
-        "tags": ["CAP", "SAP"],
+        "tags": ["CAP", "SAP", "sample"],
         "license": "apache-2.0",
         "liveDemoUrl": "https://cloud-cap-samples-fiori.bestofui5.org/"
       },
       {
         "name": "orders",
-        "addedToBoUI5": "2022-06-16T00:42:42.123Z",
+        "addedToBoUI5": "2022-07-23T09:47:57.868Z",
         "type": "application",
-        "tags": ["CAP", "SAP"],
+        "tags": ["CAP", "SAP", "sample"],
         "license": "apache-2.0",
         "liveDemoUrl": "https://cloud-cap-samples-orders.bestofui5.org/"
       }
     ]
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "hacking-away-sampleapp",
+    "addedToBoUI5": "2022-07-24T15:47:57.868Z",
+    "type": "application",
+    "tags": ["CAP", "typescript", "sample", "library"],
+    "license": "apache-2.0",
+    "liveDemoUrl": "https://hacking-away-sampleapp.bestofui5.org/index.html"
   }
 ]

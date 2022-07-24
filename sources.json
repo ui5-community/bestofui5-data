@@ -440,5 +440,26 @@
         "liveDemoUrl": "https://cloud-cap-samples-orders.bestofui5.org/"
       }
     ]
+  },
+  {
+    "owner": "odata2ts",
+    "repo": "odata2ts",
+    "subpath": "packages",
+    "subpackages": [
+      {
+        "name": "odata2model",
+        "addedToBoUI5": "2022-07-24T16:47:57.868Z",
+        "type": "command",
+        "tags": ["typescript"],
+        "license": "mit"
+      },
+      {
+        "name": "odata-service",
+        "addedToBoUI5": "2022-07-24T16:47:57.868Z",
+        "type": "command",
+        "tags": ["typescript"],
+        "license": "mit"
+      }
+    ]
   }
 ]

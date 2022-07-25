@@ -141,6 +141,7 @@ export default class GitHubRepositoriesProvider {
 			packageReturn.createdAt = repoInfo.createdAt;
 			packageReturn.updatedAt = repoInfo.updatedAt;
 			packageReturn.vscodeInstalls = -1;
+			packageReturn.sourceType = sourcePackage.type;
 
 			// check if author is a object
 			if (packageReturn.author && typeof packageReturn.author === "object") {
@@ -389,6 +390,7 @@ export default class GitHubRepositoriesProvider {
 						const packageToUpdate = packages.find(
 							(packageFind: IPackage) => packageFind.gitHubRepo === source.repo && packageFind.gitHubOwner === source.owner && packageFind.subPath === path
 						);
+						packageToUpdate.sourceType = subpackage.type;
 						const versionToUpdate = versions.find((versionFind: any) => versionFind.name === packageToUpdate.name);
 						for (const changelog of parsedChangelog.versions) {
 							const versionToUpdate = versions.find((versionFind: any) => versionFind.name === packageToUpdate.name && versionFind.version === changelog.version);
@@ -415,6 +417,7 @@ export default class GitHubRepositoriesProvider {
 						removeMarkdown: false, // default: true
 					});
 					const packageToUpdate = packages.find((packageFind: IPackage) => packageFind.gitHubRepo === source.repo && packageFind.gitHubOwner === source.owner);
+					packageToUpdate.sourceType = source.type;
 					for (const changelog of parsedChangelog.versions) {
 						const versionToUpdate = versions.find((versionFind: any) => versionFind.name === packageToUpdate.name && versionFind.version === changelog.version);
 						if (versionToUpdate) {

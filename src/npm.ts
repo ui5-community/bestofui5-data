@@ -160,7 +160,7 @@ export default class NpmProvider {
 				source.createdAt = metaData?.data?.time?.created;
 				source.updatedAt = metaData?.data?.time?.modified;
 				source.npmlink = `https://www.npmjs.com/package/${source.name}`;
-				source.versions = this.formatVersionToArray(metaData?.data?.time, source.npmlink);
+				source.versions = this.formatVersionToArray(metaData?.data?.time, source);
 				source.license = metaData?.data?.license;
 			} catch (error) {
 				console.error(`Error fetching npm metadata for ${source.name}`);
@@ -218,14 +218,15 @@ export default class NpmProvider {
 		return groupedByYearMonth;
 	}
 
-	static formatVersionToArray(version: any, npmlink: string): NPMVersions[] {
+	static formatVersionToArray(version: any, source: IPackage): NPMVersions[] {
 		let versions: NPMVersions[] = [];
 		for (const [key, value] of Object.entries(version)) {
 			versions.push({
 				version: key,
 				date: value as string,
-				link: `${npmlink}/v/${key}`,
+				link: `${source.npmlink}/v/${key}`,
 				changelog: "",
+				sourceType: source.sourceType,
 			});
 		}
 		return versions;

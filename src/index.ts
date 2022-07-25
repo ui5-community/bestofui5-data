@@ -73,6 +73,7 @@ import { IPackage, Source, Tags, DataJson } from "./types";
 						version: version.version,
 						date: version.date,
 						changelog: version.changelog,
+						sourceType: packageContent.sourceType,
 					};
 					versionsArray.push(versionObject);
 				}
@@ -83,6 +84,7 @@ import { IPackage, Source, Tags, DataJson } from "./types";
 	dataJson.packages = githubPackages;
 	dataJson.tags = typesArray.concat(tagsArray).concat(licenseArray);
 
+	// set changelog to versions in packages
 	githubPackages = await GitHubRepositoriesProvider.getChangelog(sources, githubPackages, versionsArray);
 
 	writeFileSync(`${__dirname}/../data/data.json`, JSON.stringify(dataJson));

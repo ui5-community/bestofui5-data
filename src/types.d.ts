@@ -70,6 +70,7 @@ export interface IPackage {
 	gitHubContributors?: Contributor[];
 	subPath?: string;
 	liveDemoUrl: string;
+	sourceType: string;
 }
 
 export interface Tags {
@@ -166,6 +167,7 @@ export interface NPMVersions {
 	version: string;
 	link: string;
 	changelog: string;
+	sourceType: string;
 }
 
 export interface ClonesJson {

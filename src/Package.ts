@@ -1,6 +1,7 @@
 import { Contributor, IPackage, PackageDownloadsHistory } from "./types";
 
 export default class Package implements IPackage {
+	sourceType: string;
 	subPath?: string;
 	liveDemoUrl: string;
 	vscodeInstalls: number;

@@ -461,5 +461,13 @@
         "license": "mit"
       }
     ]
+  },
+  {
+    "owner": "wolfe100",
+    "repo": "openui5-paginator",
+    "addedToBoUI5": "2022-07-27T07:22:57.868Z",
+    "type": "library",
+    "tags": ["paginator"],
+    "license": "Apache-2.0"
   }
 ]

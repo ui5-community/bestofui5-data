@@ -474,7 +474,7 @@
     "owner": "SAP",
     "repo": "generator-easy-ui5",
     "addedToBoUI5": "2022-07-28T10:22:57.868Z",
-    "type": "generator",
+    "type": "command",
     "tags": ["SAP"],
     "license": "Apache-2.0"
   }

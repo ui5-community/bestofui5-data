@@ -467,6 +467,7 @@
     "repo": "openui5-paginator",
     "addedToBoUI5": "2022-07-27T07:22:57.868Z",
     "type": "library",
-    "tags": ["paginator"]
+    "tags": ["paginator"],
+    "license": "Apache-2.0"
   }
 ]

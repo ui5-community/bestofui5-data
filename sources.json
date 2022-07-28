@@ -323,7 +323,7 @@
     "license": "apache-2.0"
   },
   {
-    "owner": "sap",
+    "owner": "SAP",
     "repo": "open-ux-odata",
     "subpath": "packages",
     "subpackages": [
@@ -337,7 +337,7 @@
     ]
   },
   {
-    "owner": "sap",
+    "owner": "SAP",
     "repo": "open-ux-tools",
     "subpath": "packages",
     "subpackages": [
@@ -468,6 +468,14 @@
     "addedToBoUI5": "2022-07-27T07:22:57.868Z",
     "type": "library",
     "tags": ["paginator"],
+    "license": "Apache-2.0"
+  },
+  {
+    "owner": "SAP",
+    "repo": "generator-easy-ui5",
+    "addedToBoUI5": "2022-07-28T10:22:57.868Z",
+    "type": "generator",
+    "tags": ["SAP"],
     "license": "Apache-2.0"
   }
 ]

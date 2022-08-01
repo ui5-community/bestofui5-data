@@ -108,7 +108,12 @@ export default class GitHubRepositoriesProvider {
 		packageObject.githublink = repo.data.html_url;
 		packageObject.forks = repo.data.forks;
 		packageObject.stars = repo.data.stargazers_count;
-		packageObject.license = repo.data.license.key;
+		try {
+			packageObject.license = repo.data.license.key;
+		} catch (error) {
+			console.log("\x1b[31m%s\x1b[0m", `No license found on GitHub Repo ${source.owner}/${source.repo}`);
+		}
+
 		packageObject.defaultBranch = repo.data.default_branch;
 		packageObject.description = repo.data.description;
 		return packageObject;
@@ -177,10 +182,10 @@ export default class GitHubRepositoriesProvider {
 						readmeString = readmeString.replace('<img src="', `<img src="https://raw.githubusercontent.com/${source.owner}/${source.repo}/${repoInfo.defaultBranch}/`);
 						packageReturn.readme = readmeString;
 					} catch (error) {
-						console.log(`No README.mound for ${packageReturn.githublink}`);
+						console.log("\x1b[31m%s\x1b[0m", `No README found for ${packageReturn.githublink}`);
 					}
 				} else {
-					console.log(`No README.mound for ${packageReturn.githublink}`);
+					console.log("\x1b[31m%s\x1b[0m", `No README found for ${packageReturn.githublink}`);
 				}
 			}
 		} catch (error) {

@@ -501,5 +501,13 @@
     "type": "task",
     "tags": ["transpiler","regenerator-runtime"],
     "license": "MIT"
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "generator-ui5-ts-library",
+    "addedToBoUI5": "2022-08-01T00:00:00.007Z",
+    "type": "generator",
+    "tags": ["library","typescript"],
+    "license": "mit"
   }
 ]

@@ -477,5 +477,29 @@
     "type": "command",
     "tags": ["SAP"],
     "license": "Apache-2.0"
+  },
+  {
+    "owner": "lemaiwo",
+    "repo": "ui5-middleware-route-proxy",
+    "addedToBoUI5": "2022-07-31T19:37:57.868Z",
+    "type": "middleware",
+    "tags": ["proxy","routes"],
+    "license": "MIT"
+  },
+  {
+    "owner": "lemaiwo",
+    "repo": "ui5-task-cachebuster-indexing",
+    "addedToBoUI5": "2022-07-31T19:37:57.868Z",
+    "type": "task",
+    "tags": ["cache","cachebuster"],
+    "license": "MIT"
+  },
+  {
+    "owner": "lemaiwo",
+    "repo": "ui5-task-transpile-gen",
+    "addedToBoUI5": "2022-07-31T19:37:57.868Z",
+    "type": "task",
+    "tags": ["transpiler","regenerator-runtime"],
+    "license": "MIT"
   }
 ]

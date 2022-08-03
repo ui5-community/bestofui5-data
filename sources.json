@@ -398,7 +398,7 @@
     "addedToBoUI5": "2022-07-08T14:13:43.858Z",
     "type": "middleware",
     "tags": ["proxy", "neo", "WebIDEUsage", "destination"],
-    "license": "MIT"
+    "license": "mit"
   },
   {
     "owner": "ui5-community",
@@ -484,7 +484,7 @@
     "addedToBoUI5": "2022-07-31T19:37:57.868Z",
     "type": "middleware",
     "tags": ["proxy","routes"],
-    "license": "MIT"
+    "license": "mit"
   },
   {
     "owner": "lemaiwo",
@@ -492,7 +492,7 @@
     "addedToBoUI5": "2022-07-31T19:37:57.868Z",
     "type": "task",
     "tags": ["cache","cachebuster"],
-    "license": "MIT"
+    "license": "mit"
   },
   {
     "owner": "lemaiwo",
@@ -500,7 +500,7 @@
     "addedToBoUI5": "2022-07-31T19:37:57.868Z",
     "type": "task",
     "tags": ["transpiler","regenerator-runtime"],
-    "license": "MIT"
+    "license": "mit"
   },
   {
     "owner": "ui5-community",

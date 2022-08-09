@@ -509,5 +509,13 @@
     "type": "generator",
     "tags": ["library","typescript"],
     "license": "mit"
+  },
+  {
+    "owner": "lemaiwo",
+    "repo": "ui5-control-generator",
+    "addedToBoUI5": "2022-08-09T21:52:00.000Z",
+    "type": "command",
+    "tags": ["control", "generator","development", "tool"],
+    "license": "apache-2.0"
   }
 ]

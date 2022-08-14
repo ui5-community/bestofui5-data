@@ -396,6 +396,7 @@ export default class GitHubRepositoriesProvider {
 							(packageFind: IPackage) => packageFind.gitHubRepo === source.repo && packageFind.gitHubOwner === source.owner && packageFind.subPath === path
 						);
 						packageToUpdate.sourceType = subpackage.type;
+						packageToUpdate.changelog = changelogFile.data.toString();
 						const versionToUpdate = versions.find((versionFind: any) => versionFind.name === packageToUpdate.name);
 						for (const changelog of parsedChangelog.versions) {
 							const versionToUpdate = versions.find((versionFind: any) => versionFind.name === packageToUpdate.name && versionFind.version === changelog.version);
@@ -423,6 +424,7 @@ export default class GitHubRepositoriesProvider {
 					});
 					const packageToUpdate = packages.find((packageFind: IPackage) => packageFind.gitHubRepo === source.repo && packageFind.gitHubOwner === source.owner);
 					packageToUpdate.sourceType = source.type;
+					packageToUpdate.changelog = changelogFile.data.toString();
 					for (const changelog of parsedChangelog.versions) {
 						const versionToUpdate = versions.find((versionFind: any) => versionFind.name === packageToUpdate.name && versionFind.version === changelog.version);
 						if (versionToUpdate) {

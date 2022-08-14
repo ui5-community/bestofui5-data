@@ -1,6 +1,7 @@
 import { Contributor, IPackage, PackageDownloadsHistory } from "./types";
 
 export default class Package implements IPackage {
+	changelog: string;
 	sourceType: string;
 	subPath?: string;
 	liveDemoUrl: string;

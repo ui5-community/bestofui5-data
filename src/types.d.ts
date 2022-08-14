@@ -49,6 +49,7 @@ export interface IPackage {
 	type: string;
 	tags: string[];
 	readme: string;
+	changelog: string;
 	forks: number;
 	stars: number;
 	updatedAt: string;

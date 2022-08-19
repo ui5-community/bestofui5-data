@@ -190,7 +190,7 @@
     "repo": "generator-ui5-ts-app",
     "addedToBoUI5": "2022-04-14T00:00:00.007Z",
     "type": "generator",
-    "tags": ["typescript"],
+    "tags": ["generator", "typescript"],
     "license": "apache-2.0"
   },
   {
@@ -523,6 +523,14 @@
     "addedToBoUI5": "2022-08-09T21:52:00.000Z",
     "type": "command",
     "tags": ["control", "generator","development", "tool"],
+    "license": "apache-2.0"
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "generator-ui5-app",
+    "addedToBoUI5": "2022-08-19T05:31:00.007Z",
+    "type": "generator",
+    "tags": ["generator"],
     "license": "apache-2.0"
   }
 ]

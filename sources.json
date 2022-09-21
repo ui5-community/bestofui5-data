@@ -532,5 +532,43 @@
     "type": "generator",
     "tags": ["generator"],
     "license": "apache-2.0"
+  },
+  {
+    "owner": "SAP",
+    "repo": "ui5-language-assistant",
+    "subpath": "packages",
+    "subpackages": [
+      {
+        "name": "vscode-ui5-language-assistant",
+        "addedToBoUI5": "2022-09-21T10:47:57.868Z",
+        "type": "vscode",
+        "tags": ["SAP"],
+        "license": "apache-2.0"
+      }
+    ]
+  },
+  {
+    "owner": "iljapostnovs",
+    "repo": "VSCodeUI5Plugin",
+    "addedToBoUI5": "2022-09-21T10:47:57.868Z",
+    "type": "vscode",
+    "tags": ["linter"],
+    "license": "apache-2.0"
+  },
+  {
+    "owner": "wozjac",
+    "repo": "vscode-ui5-api-reference",
+    "addedToBoUI5": "2022-09-21T10:47:57.868Z",
+    "type": "vscode",
+    "tags": ["api-reference"],
+    "license": "mit"
+  },
+  {
+    "owner": "wozjac",
+    "repo": "vscode-ui5-odata-mock-generator",
+    "addedToBoUI5": "2022-09-21T10:47:57.868Z",
+    "type": "vscode",
+    "tags": ["mock", "mockserver", "mockdata"],
+    "license": "mit"
   }
 ]

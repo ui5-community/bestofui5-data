@@ -148,7 +148,7 @@
         "name": "ui5-tooling-transpile",
         "addedToBoUI5": "2022-08-17T16:02:57.868Z",
         "type": "tooling",
-        "tags": ["tooling","typescript", "ui5-ecosystem-showcase"],
+        "tags": ["tooling", "typescript", "ui5-ecosystem-showcase"],
         "license": "beer-ware"
       }
     ]
@@ -490,7 +490,7 @@
     "repo": "ui5-middleware-route-proxy",
     "addedToBoUI5": "2022-07-31T19:37:57.868Z",
     "type": "middleware",
-    "tags": ["proxy","routes"],
+    "tags": ["proxy", "routes"],
     "license": "mit"
   },
   {
@@ -498,7 +498,7 @@
     "repo": "ui5-task-cachebuster-indexing",
     "addedToBoUI5": "2022-07-31T19:37:57.868Z",
     "type": "task",
-    "tags": ["cache","cachebuster"],
+    "tags": ["cache", "cachebuster"],
     "license": "mit"
   },
   {
@@ -506,7 +506,7 @@
     "repo": "ui5-task-transpile-gen",
     "addedToBoUI5": "2022-07-31T19:37:57.868Z",
     "type": "task",
-    "tags": ["transpiler","regenerator-runtime"],
+    "tags": ["transpiler", "regenerator-runtime"],
     "license": "mit"
   },
   {
@@ -514,7 +514,7 @@
     "repo": "generator-ui5-ts-library",
     "addedToBoUI5": "2022-08-03T08:00:00.007Z",
     "type": "generator",
-    "tags": ["library","typescript"],
+    "tags": ["library", "typescript"],
     "license": "mit"
   },
   {
@@ -522,7 +522,7 @@
     "repo": "ui5-control-generator",
     "addedToBoUI5": "2022-08-09T21:52:00.000Z",
     "type": "command",
-    "tags": ["control", "generator","development", "tool"],
+    "tags": ["control", "generator", "development", "tool"],
     "license": "apache-2.0"
   },
   {
@@ -552,7 +552,23 @@
     "repo": "VSCodeUI5Plugin",
     "addedToBoUI5": "2022-09-21T10:47:57.868Z",
     "type": "vscode",
-    "tags": ["linter"],
+    "tags": ["linter", "development", "typescript"],
+    "license": "apache-2.0"
+  },
+  {
+    "owner": "iljapostnovs",
+    "repo": "ui5plugin-linter",
+    "addedToBoUI5": "2022-11-08T20:10:00.000Z",
+    "type": "module",
+    "tags": ["linter", "development", "typescript"],
+    "license": "apache-2.0"
+  },
+  {
+    "owner": "iljapostnovs",
+    "repo": "ui5plugin-parser",
+    "addedToBoUI5": "2022-11-08T20:10:00.000Z",
+    "type": "module",
+    "tags": ["development", "typescript"],
     "license": "apache-2.0"
   },
   {

@@ -440,7 +440,7 @@
     "subpath": "packages",
     "subpackages": [
       {
-        "name": "odata2model",
+        "name": "odata2ts",
         "addedToBoUI5": "2022-07-24T16:47:57.868Z",
         "type": "command",
         "tags": ["typescript"],

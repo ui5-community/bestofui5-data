@@ -581,5 +581,19 @@
     "type": "command",
     "tags": ["development", "tooling", "testing", "browser"],
     "license": "mit"
+  },
+    {
+    "owner": "SAP",
+    "repo": "ui5-tooling-extensions",
+    "subpath": "packages",
+    "subpackages": [
+      {
+        "name": "@ui5/middleware-code-coverage",
+        "addedToBoUI5": "2023-03-22T14:12:29.389Z",
+        "type": "middleware",
+        "tags": ["development", "testing", "tooling", "SAP"],
+        "license": "apache-2.0"
+      }
+    ]
   }
 ]

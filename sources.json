@@ -241,7 +241,15 @@
     "repo": "openui5-smart-mockserver",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "library",
-    "tags": ["mock", "mockserver", "mockdata", "faker", "fake", "smart", "smarter"],
+    "tags": [
+      "mock",
+      "mockserver",
+      "mockdata",
+      "faker",
+      "fake",
+      "smart",
+      "smarter"
+    ],
     "license": "mit"
   },
   {
@@ -567,14 +575,6 @@
     "license": "mit"
   },
   {
-    "owner": "marianfoo",
-    "repo": "ui5-cc-excelUpload",
-    "addedToBoUI5": "2022-11-30T09:37:57.868Z",
-    "type": "customControl",
-    "tags": ["excel"],
-    "license": "apache-2.0"
-  },
-  {
     "owner": "ArnaudBuchholz",
     "repo": "ui5-test-runner",
     "addedToBoUI5": "2023-03-07T16:03:54.962Z",
@@ -582,7 +582,7 @@
     "tags": ["development", "tooling", "testing", "browser"],
     "license": "mit"
   },
-    {
+  {
     "owner": "SAP",
     "repo": "ui5-tooling-extensions",
     "subpath": "packages",
@@ -592,6 +592,34 @@
         "addedToBoUI5": "2023-04-20T12:00:00.000Z",
         "type": "middleware",
         "tags": ["development", "testing", "tooling", "SAP"],
+        "license": "apache-2.0"
+      }
+    ]
+  },
+  {
+    "owner": "marianfoo",
+    "repo": "ui5-cc-excelUpload",
+    "subpath": "packages",
+    "subpackages": [
+      {
+        "name": "ui5-cc-excelUpload",
+        "addedToBoUI5": "2022-11-30T09:37:57.868Z",
+        "type": "customControl",
+        "tags": ["excel"],
+        "license": "apache-2.0"
+      },
+      {
+        "name": "ui5-cc-excelUpload-Button",
+        "addedToBoUI5": "2023-04-09T10:47:57.868Z",
+        "type": "customControl",
+        "tags": ["excel"],
+        "license": "apache-2.0"
+      },
+      {
+        "name": "ui5-cc-excelUpload-Generator",
+        "addedToBoUI5": "2023-04-09T10:47:57.868Z",
+        "type": "generator",
+        "tags": ["excel"],
         "license": "apache-2.0"
       }
     ]

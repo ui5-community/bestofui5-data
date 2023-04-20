@@ -241,7 +241,15 @@
     "repo": "openui5-smart-mockserver",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "library",
-    "tags": ["mock", "mockserver", "mockdata", "faker", "fake", "smart", "smarter"],
+    "tags": [
+      "mock",
+      "mockserver",
+      "mockdata",
+      "faker",
+      "fake",
+      "smart",
+      "smarter"
+    ],
     "license": "mit"
   },
   {
@@ -573,6 +581,20 @@
     "type": "command",
     "tags": ["development", "tooling", "testing", "browser"],
     "license": "mit"
+  },
+  {
+    "owner": "SAP",
+    "repo": "ui5-tooling-extensions",
+    "subpath": "packages",
+    "subpackages": [
+      {
+        "name": "middleware-code-coverage",
+        "addedToBoUI5": "2023-04-20T12:00:00.000Z",
+        "type": "middleware",
+        "tags": ["development", "testing", "tooling", "SAP"],
+        "license": "apache-2.0"
+      }
+    ]
   },
   {
     "owner": "marianfoo",

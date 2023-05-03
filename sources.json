@@ -623,5 +623,13 @@
         "license": "apache-2.0"
       }
     ]
+  },
+  {
+    "owner": "marianfoo",
+    "repo": "ui5-cc-pdfviewer",
+    "addedToBoUI5": "2023-05-03T11:03:54.962Z",
+    "type": "customControl",
+    "tags": ["pdf"],
+    "license": "mit"
   }
 ]

@@ -32,7 +32,7 @@ jobs:
           git show live-data:data/contributors.json > data/contributors.json
         continue-on-error: true
       - name: Use Node.js LTS (16.x)
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: "16"
       - name: npm install

@@ -598,25 +598,25 @@
   },
   {
     "owner": "marianfoo",
-    "repo": "ui5-cc-excelUpload",
+    "repo": "ui5-cc-spreadsheetimporter",
     "subpath": "packages",
     "subpackages": [
       {
-        "name": "ui5-cc-excelUpload",
+        "name": "ui5-cc-spreadsheetimporter",
         "addedToBoUI5": "2022-11-30T09:37:57.868Z",
         "type": "customControl",
         "tags": ["excel"],
         "license": "apache-2.0"
       },
       {
-        "name": "ui5-cc-excelUpload-Button",
+        "name": "ui5-cc-spreadsheetimporter-button",
         "addedToBoUI5": "2023-04-09T10:47:57.868Z",
         "type": "customControl",
         "tags": ["excel"],
         "license": "apache-2.0"
       },
       {
-        "name": "ui5-cc-excelUpload-Generator",
+        "name": "ui5-cc-spreadsheetimporter-generator",
         "addedToBoUI5": "2023-04-09T10:47:57.868Z",
         "type": "generator",
         "tags": ["excel"],

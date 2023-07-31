@@ -631,5 +631,14 @@
     "type": "customControl",
     "tags": ["pdf"],
     "license": "mit"
+  },
+  {
+    "owner": "aydin-ozcan",
+    "repo": "generator-ui5-react-nest",
+    "addedToBoUI5": "2023-07-31T06:29:26.884Z",
+    "type": "generator",
+    "tags": ["react"],
+    "license": "apache-2.0"
   }
+
 ]

@@ -639,6 +639,13 @@
     "type": "generator",
     "tags": ["react"],
     "license": "apache-2.0"
+  },
+  {
+    "owner": "jchirk",
+    "repo": "ui5-i18n-excel-converter",
+    "addedToBoUI5": "2023-08-01T07:53:46.071Z",
+    "type": "tooling",
+    "tags": ["excel","i18n"],
+    "license": "gpl-3.0"
   }
-
 ]

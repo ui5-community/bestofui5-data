@@ -647,5 +647,36 @@
     "type": "tooling",
     "tags": ["excel","i18n"],
     "license": "gpl-3.0"
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "generator-ui5-library-webc",
+    "addedToBoUI5": "2023-09-04T00:00:00.007Z",
+    "type": "generator",
+    "tags": ["library","webcomponents","generator"],
+    "license": "apache-2.0"
+  }, {
+    "owner": "SAP",
+    "repo": "ui5-tooling-webc",
+    "addedToBoUI5": "2023-09-04T00:00:00.007Z",
+    "type": "module",
+    "tags": ["tooling","webcomponents","generator"],
+    "license": "apache-2.0"
+  },
+  {
+    "owner": "lemaiwo",
+    "repo": "ui5-space-webcomponent-library",
+    "addedToBoUI5": "2023-09-04T00:00:00.007Z",
+    "type": "application",
+    "tags": ["sample", "webcomponents", "UI5con2023", "library"],
+    "license": "apache-2.0"
+  },
+  {
+    "owner": "lemaiwo",
+    "repo": "ui5-space-webcomponent-package",
+    "addedToBoUI5": "2023-09-04T00:00:00.007Z",
+    "type": "application",
+    "tags": ["sample", "webcomponents", "UI5con2023", "package"],
+    "license": "apache-2.0"
   }
 ]

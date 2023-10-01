@@ -241,15 +241,7 @@
     "repo": "openui5-smart-mockserver",
     "addedToBoUI5": "2022-07-10T11:52:00.000Z",
     "type": "library",
-    "tags": [
-      "mock",
-      "mockserver",
-      "mockdata",
-      "faker",
-      "fake",
-      "smart",
-      "smarter"
-    ],
+    "tags": ["mock", "mockserver", "mockdata", "faker", "fake", "smart", "smarter"],
     "license": "mit"
   },
   {
@@ -609,13 +601,6 @@
         "license": "apache-2.0"
       },
       {
-        "name": "ui5-cc-spreadsheetimporter-button",
-        "addedToBoUI5": "2023-04-09T10:47:57.868Z",
-        "type": "customControl",
-        "tags": ["excel"],
-        "license": "apache-2.0"
-      },
-      {
         "name": "ui5-cc-spreadsheetimporter-generator",
         "addedToBoUI5": "2023-04-09T10:47:57.868Z",
         "type": "generator",
@@ -645,7 +630,7 @@
     "repo": "ui5-i18n-excel-converter",
     "addedToBoUI5": "2023-08-01T07:53:46.071Z",
     "type": "tooling",
-    "tags": ["excel","i18n"],
+    "tags": ["excel", "i18n"],
     "license": "gpl-3.0"
   },
   {
@@ -653,14 +638,15 @@
     "repo": "generator-ui5-library-webc",
     "addedToBoUI5": "2023-09-04T00:00:00.007Z",
     "type": "generator",
-    "tags": ["library","webcomponents","generator"],
+    "tags": ["library", "webcomponents", "generator"],
     "license": "apache-2.0"
-  }, {
+  },
+  {
     "owner": "SAP",
     "repo": "ui5-tooling-webc",
     "addedToBoUI5": "2023-09-04T00:00:00.007Z",
     "type": "module",
-    "tags": ["tooling","webcomponents","generator"],
+    "tags": ["tooling", "webcomponents", "generator"],
     "license": "apache-2.0"
   },
   {

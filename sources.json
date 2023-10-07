@@ -664,5 +664,26 @@
     "type": "application",
     "tags": ["sample", "webcomponents", "UI5con2023", "package"],
     "license": "apache-2.0"
+  },
+  {
+    "owner": "SRBConsultingTeam",
+    "repo": "srbjslogger",
+    "addedToBoUI5": "2023-10-05T08:53:46.071Z",
+    "type": "module",
+    "tags": ["log"]
+  },
+  {
+    "owner": "SRBConsultingTeam",
+    "repo": "srbinfoandsupportjs",
+    "addedToBoUI5": "2023-10-05T08:53:46.071Z",
+    "type": "library",
+    "tags": ["log", "support"]
+  },
+  {
+    "owner": "SRBConsultingTeam",
+    "repo": "srbphysicalfeedbackjs",
+    "addedToBoUI5": "2023-10-05T08:53:46.071Z",
+    "type": "library",
+    "tags": ["audio", "feedback"]
   }
 ]

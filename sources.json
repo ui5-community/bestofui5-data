@@ -724,5 +724,13 @@
     "type": "library",
     "tags": ["control", "button"],
     "license": "mit"
+  },
+  {
+    "owner": "hasanciftci26",
+    "repo": "ui5-antares",
+    "addedToBoUI5": "2024-06-07T12:26:00.057Z",
+    "type": "library",
+    "tags": ["odata", "dialog", "entry"],
+    "license": "apache-2.0"
   }  
 ]

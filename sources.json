@@ -716,5 +716,13 @@
     "type": "library",
     "tags": ["audio", "feedback"],
     "license": "mit"
-  }
+  },
+  {
+    "owner": "htammen",
+    "repo": "ui5.cc.timerbutton",
+    "addedToBoUI5": "2024-06-07T11:08:35.057Z",
+    "type": "library",
+    "tags": ["control", "button"],
+    "license": "mit"
+  }  
 ]

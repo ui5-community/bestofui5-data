@@ -733,4 +733,12 @@
     "tags": ["odata", "dialog", "entry"],
     "license": "apache-2.0"
   }  
+  {
+    "owner": "SAP",
+    "repo": "ui5-linter",
+    "addedToBoUI5": "2024-09-03T06:44:28.250Z",
+    "type": "command",
+    "tags": ["linting", "development", "UI5 2.0", "SAP"],
+    "license": "apache-2.0"
+  }
 ]

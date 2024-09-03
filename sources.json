@@ -726,6 +726,14 @@
     "license": "mit"
   },
   {
+    "owner": "hasanciftci26",
+    "repo": "ui5-antares",
+    "addedToBoUI5": "2024-09-03T08:26:00.057Z",
+    "type": "library",
+    "tags": ["odata", "dialog", "entry"],
+    "license": "apache-2.0"
+  },
+  {
     "owner": "SAP",
     "repo": "ui5-linter",
     "addedToBoUI5": "2024-09-03T06:44:28.250Z",

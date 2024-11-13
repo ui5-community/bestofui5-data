@@ -627,13 +627,6 @@
         "type": "customControl",
         "tags": ["excel"],
         "license": "apache-2.0"
-      },
-      {
-        "name": "ui5-cc-spreadsheetimporter-generator",
-        "addedToBoUI5": "2023-04-09T10:47:57.868Z",
-        "type": "generator",
-        "tags": ["excel"],
-        "license": "apache-2.0"
       }
     ]
   },

@@ -733,5 +733,13 @@
     "type": "command",
     "tags": ["linting", "development", "UI5 2.0", "SAP"],
     "license": "apache-2.0"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "wdio-qunit-service",
+    "addedToBoUI5": "2024-11-27T00:12:33.328Z",
+    "type": "module",
+    "tags": ["testing", "development", "wdio", "wdi5", "qunit", "karma", "tooling", "browser"],
+    "license": "MIT"
   }
 ]

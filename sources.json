@@ -399,14 +399,6 @@
     "liveDemoUrl": "https://hacking-away-sampleapp.bestofui5.org/index.html"
   },
   {
-    "owner": "pinakipatrapro",
-    "repo": "ui5con.dndashboard",
-    "addedToBoUI5": "2022-07-13T06:12:59.124Z",
-    "type": "library",
-    "tags": ["Dashboard", "DragnDrop", "UI5con2022"],
-    "license": "mit"
-  },
-  {
     "owner": "preetamkajalrout",
     "repo": "ui5-middleware-destination",
     "addedToBoUI5": "2022-07-08T14:13:43.858Z",

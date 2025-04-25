@@ -157,6 +157,13 @@
         "type": "tooling",
         "tags": ["tooling", "typescript", "ui5-ecosystem-showcase"],
         "license": "apache-2.0,beer-ware"
+      },
+      {
+        "name": "ui5-middleware-oidc",
+        "addedToBoUI5": "2025-04-25T11:26:00.000Z",
+        "type": "middleware",
+        "tags": ["auth", "middleware"],
+        "license": "apache-2.0"
       }
     ]
   },

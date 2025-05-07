@@ -733,5 +733,13 @@
     "type": "module",
     "tags": ["testing", "development", "wdio", "wdi5", "qunit", "karma", "tooling", "browser"],
     "license": "MIT"
+  },
+  {
+    "owner": "maxi1555",
+    "repo": "ui5-middleware-oidc",
+    "addedToBoUI5": "2025-04-25T11:26:00.000Z",
+    "type": "middleware",
+    "tags": ["auth"],
+    "license": "apache-2.0"
   }
 ]

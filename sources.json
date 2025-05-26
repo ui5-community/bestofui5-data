@@ -730,8 +730,8 @@
     "owner": "mauriciolauffer",
     "repo": "wdio-qunit-service",
     "addedToBoUI5": "2024-11-27T00:12:33.328Z",
-    "type": "module",
-    "tags": ["testing", "development", "wdio", "wdi5", "qunit", "karma", "tooling", "browser"],
+    "type": "command",
+    "tags": ["testing", "development", "wdio", "wdi5", "qunit", "karma", "tooling", "test-runner"],
     "license": "MIT"
   },
   {
@@ -741,5 +741,13 @@
     "type": "middleware",
     "tags": ["auth"],
     "license": "apache-2.0"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "vitest-environment-ui5",
+    "addedToBoUI5": "2025-05-26T00:12:33.328Z",
+    "type": "command",
+    "tags": ["vitest", "vitest-environment", "testing", "development", "tooling", "test-runner"],
+    "license": "MIT"
   }
 ]

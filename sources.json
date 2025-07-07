@@ -749,5 +749,13 @@
     "type": "command",
     "tags": ["vitest", "vitest-environment", "testing", "development", "tooling", "test-runner"],
     "license": "MIT"
+  },
+  {
+    "owner": "mauriciolauffer",
+    "repo": "jest-environment-ui5",
+    "addedToBoUI5": "2025-07-07T10:22:22.031Z",
+    "type": "command",
+    "tags": ["jest", "jest-environment", "testing", "development", "tooling", "test-runner"],
+    "license": "MIT"
   }
 ]

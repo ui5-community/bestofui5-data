@@ -430,14 +430,6 @@
     "subpath": "",
     "subpackages": [
       {
-        "name": "fiori",
-        "addedToBoUI5": "2022-07-23T09:47:57.868Z",
-        "type": "application",
-        "tags": ["CAP", "SAP", "sample"],
-        "license": "apache-2.0",
-        "liveDemoUrl": "https://cloud-cap-samples-fiori.bestofui5.org/"
-      },
-      {
         "name": "orders",
         "addedToBoUI5": "2022-07-23T09:47:57.868Z",
         "type": "application",

@@ -749,5 +749,13 @@
     "type": "command",
     "tags": ["jest", "jest-environment", "testing", "development", "tooling", "test-runner"],
     "license": "MIT"
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "ui5-fontawesome-lib",
+    "addedToBoUI5": "2025-10-03T00:00:00.000Z",
+    "type": "library",
+    "tags": ["font-awesome", "icons"],
+    "license": "apache-2.0"
   }
 ]

@@ -719,6 +719,14 @@
     "license": "apache-2.0"
   },
   {
+    "owner": "UI5",
+    "repo": "mcp-server",
+    "addedToBoUI5": "2025-12-04T10:35:14.092Z",
+    "type": "mcp-server",
+    "tags": ["mcp-server", agentic-ai", "development", "vibe-coding", "SAP"],
+    "license": "apache-2.0"
+  },
+  {
     "owner": "mauriciolauffer",
     "repo": "wdio-qunit-service",
     "addedToBoUI5": "2024-11-27T00:12:33.328Z",

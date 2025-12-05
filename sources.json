@@ -368,6 +368,13 @@
         "type": "middleware",
         "tags": ["proxy", "SAP"],
         "license": "apache-2.0"
+      },
+      {
+        "name": "fiori-mcp-server",
+        "addedToBoUI5": "2025-12-04T10:35:14.092Z",
+        "type": "tooling",
+        "tags": ["mcp-server", "agentic-ai", "development", "vibe-coding", "SAP"],
+        "license": "apache-2.0"
       }
     ]
   },
@@ -722,7 +729,7 @@
     "owner": "UI5",
     "repo": "mcp-server",
     "addedToBoUI5": "2025-12-04T10:35:14.092Z",
-    "type": "mcp-server",
+    "type": "tooling",
     "tags": ["mcp-server", "agentic-ai", "development", "vibe-coding", "SAP"],
     "license": "apache-2.0"
   },

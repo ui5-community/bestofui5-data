@@ -772,5 +772,13 @@
     "type": "library",
     "tags": ["font-awesome", "icons"],
     "license": "apache-2.0"
+  },
+  {
+    "owner": "concircle",
+    "repo": "i18n-ai-translator",
+    "addedToBoUI5": "2026-03-30T14:00:00.000Z",
+    "type": "tooling",
+    "tags": ["i18n", "translation", "openai", "i18n.properties", "tooling", "ai", "internationalization"],
+    "license": "MIT"
   }
 ]

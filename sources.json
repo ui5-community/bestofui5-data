@@ -788,5 +788,19 @@
     "type": "library",
     "tags": ["touch", "controls", "ui5", "library"],
     "license": "apache-2.0"
+  },
+  {
+    "owner": "abap2UI5",
+    "repo": "embed-control",
+    "subpath": "packages",
+    "subpackages": [
+      {
+        "name": "embed-control",
+        "addedToBoUI5": "2026-09-30T12:00:00.000Z",
+        "type": "customControl",
+        "tags": ["abap2ui5", "abap", "embed"],
+        "license": "mit"
+      }
+    ]
   }
 ]
